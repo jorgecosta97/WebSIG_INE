@@ -4,7 +4,7 @@
 
 // Criar o Mapa e definir o zoom e a coordenada central
 var map = L.map('map'); // <- Criação do Mapa
-map.setView([39.60470549437551, -8.413797424060485], 7); // Definição da coordenada central e do zoom
+map.setView([39.60470549437551, -8.413797424060485], 6); // Definição da coordenada central e do zoom
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
