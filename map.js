@@ -21,9 +21,12 @@ var B_OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-// Inserir as Camadas com informação espacial:
-//   1. Densidade PoPulacional por município (2019, 2011, 2001)
-//   -> Rampa de cores da densidade populacional
+/*
+Inserir as Camadas com informação espacial:
+    1. Densidade PoPulacional por município (2019, 2011, 2001)
+        -> Rampa de cores da densidade populacional
+*/
+
 function definir_cor_DP(d) {
     return d > 142  ? '#bd0026' :
            d > 67   ? '#fecc5c' :
@@ -46,7 +49,7 @@ function DP2019_style(feature) {
 
 //      -> Definir o Popup          ...Desenvolver o popup e modificar para ele aparecer quando o cursor passa for cima da feature...
 function DP2019_popup(feature, layer){
-    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.CONCELHO + ' (2019) = ' + feature.properties.DP2019 + ' </p>');
+    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.Anos + ' (2019) = ' + feature.properties.DP2019 + ' </p>');
 }
 
 
@@ -65,7 +68,7 @@ function DP2011_style(feature) {
 
 //      -> Definir o Popup          ...Desenvolver o popup e modificar para ele aparecer quando o cursor passa for cima da feature...
 function DP2011_popup(feature, layer){
-    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.CONCELHO + ' (2011) = ' + feature.properties.DP2011 + ' </p>');
+    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.Anos + ' (2011) = ' + feature.properties.DP2011 + ' </p>');
 }
 
 
@@ -84,7 +87,7 @@ function DP2001_style(feature) {
 
 //      -> Definir o Popup          ...Desenvolver o popup e modificar para ele aparecer quando o cursor passa for cima da feature...
 function DP2001_popup(feature, layer){
-    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.CONCELHO + ' (2001) = ' + feature.properties.DP2001 + ' </p>');
+    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.Anos + ' (2001) = ' + feature.properties.DP2001 + ' </p>');
 }
 
 
@@ -108,6 +111,78 @@ var L_DP2001 = L.geoJSON(PTconc, {
 });
 
 
+/*
+    2. Densidade PoPulacional por município (2019, 2011, 2001)
+        -> Rampa de cores da densidade populacional
+*/
+
+
+function definir_cor_DP_NutsIII(d) {
+    return d > 222.3  ? '#bd0026' :
+           d > 100.9   ? '#fecc5c' :
+           d > 54   ? '#fd8d3c' :
+           d > 19.9   ? '#fecc5c' :
+                      '#ffffb2';
+}
+
+//   -> Funções para a densidade populacional de 2019 -> DP2019
+//      -> Escolher a coluna para aplicar a respetiva cor ao poligono 
+function DP2019_NutsIII_style(feature) {
+    return {
+        fillColor: definir_cor_DP_NutsIII(feature.properties.DP2019),
+        weight: 0.5,
+        opacity: 0.5,
+        color: 'white',
+        fillOpacity: 1
+    };
+}
+
+//      -> Definir o Popup          ...Desenvolver o popup e modificar para ele aparecer quando o cursor passa for cima da feature...
+function DP2019_NutsIII_popup(feature, layer){
+    layer.bindPopup('<p> Densidade Populacional em ' + feature.properties.Anos + ' (2019) = ' + feature.properties.DP2019 + ' </p>');
+}
+
+var L_NUTS_DP2019 = L.geoJSON(PTnutsiii, {
+    style: DP2019_NutsIII_style,
+    onEachFeature: DP2019_NutsIII_popup
+});
+
+/*
+                    -------------------------------------------------------------------------------------------------------------------------------------------------
+    3. Taxa Bruta de mortalidade por município (2019, 2011, 2001)
+        -> Rampa de cores da densidade populacional
+*/
+
+
+function definir_cor_TBM_NutsIII(d) {
+    return d > 15.6   ? '#980043' :
+           d > 13.4   ? '#dd1c77' :
+           d > 12.3   ? '#df65b0' :
+           d > 10.1   ? '#d7b5d8' :
+                        '#f1eef6';
+}
+
+//   -> Funções para a densidade populacional de 2019 -> DP2019
+//      -> Escolher a coluna para aplicar a respetiva cor ao poligono 
+function TBM2019_NutsIII_style(feature) {
+    return {
+        fillColor: definir_cor_TBM_NutsIII(feature.properties.TM2019),
+        weight: 0.5,
+        opacity: 0.5,
+        color: 'white',
+        fillOpacity: 1
+    };
+}
+
+//      -> Definir o Popup          ...Desenvolver o popup e modificar para ele aparecer quando o cursor passa for cima da feature...
+function TBM2019_NutsIII_popup(feature, layer){
+    layer.bindPopup('<p> Taxa Bruta de Mortalidade em ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TM2019 + ' </p>');
+}
+
+var L_NUTS_TBM2019 = L.geoJSON(PTnutsiii, {
+    style: TBM2019_NutsIII_style,
+    onEachFeature: TBM2019_NutsIII_popup
+});
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -118,22 +193,23 @@ var L_DP2001 = L.geoJSON(PTconc, {
     -> Menu para selecionar as layers
         -> Variavel com os basemaps
 */
-var baseMaps = {
-	"Open Street Map": B_OSM
-};
+
+//          ...Inserir com o plugin que da para colocar imagens...
 
 /*
         -> Variavel com as camadas de informação espacial 
 */
 
 var Overlays = {
-	"Densidade populacional 2019":L_DP2019,
-	"Densidade populacional 2011":L_DP2011,
-	"Densidade populacional 2001":L_DP2001
+	"Densidade populacional por concelhos (2019)":L_DP2019,
+	"Densidade populacional por concelhos (2011)":L_DP2011,
+    "Densidade populacional por concelhos (2001)":L_DP2001,
+    "Densidade populacional (2019)":L_NUTS_DP2019,
+    "Taxa Bruta de Mortalidade (2019)":L_NUTS_TBM2019 
 };
 
 //      -> Adicionar o menu com os basemaps e overlays 
-L.control.layers(baseMaps, Overlays).addTo(map);
+L.control.layers(Overlays).addTo(map);
 
 //      ...O objetivo final e ter este menu dividido em secções expansiveis e apenas permitir que se selecione 1 secção de cada vez...
 /*var options = {

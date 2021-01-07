@@ -5,9 +5,9 @@ html{
 
 #map {
     position: absolute;
-    width: 90%;
-    height: 800px;
+    width: 80%;
+    height: 700px;
     top: 50%;
     left: 50%;
-    margin: -400px 0 0 -45%;
+    margin: -350px 0 0 -40%;
 }
