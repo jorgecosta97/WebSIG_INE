@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="author" content="Jorge Costa">
+
+<!-- Ligação aos ficheiros CSS -->
+<link rel="stylesheet" href="websig_areal.css">
+
+<!-- Ligação aos ficheiros JavaScript -->
+<script src="dist/camadas.js"></script>
+
+<!-- Ligação ao Leaflet -->
+<link rel="stylesheet" href="ext/leaflet/leaflet.css"/>
+<script src="ext/leaflet/leaflet.js"></script>
+
+<!-- Ligação ao Leaflet.easybutton -->
+<link rel="stylesheet" href="ext\easybutton\easy-button.css">
+<script src="ext\easybutton\easy-button.js"></script>
+
+<!-- Ligação ao styledLayerControl -->
+<link rel="stylesheet" href="ext/menu/styledLayerControl.css" />
+<script src="ext/menu/styledLayerControl.js"></script>
+
+<!-- Ligação ao Leaflet.Print -->
+<link rel="stylesheet" href="Leaflet_print/dist/leaflet.print.css" />
+<script src="Leaflet_print/dist/leaflet.print.js"></script>
+
+<!-- Ligação ao Leaflet.PolylineMeasure -->
+<link rel="stylesheet" href="ext/PolylineMesure/Leaflet.PolylineMeasure.css"/>
+<script src="ext/PolylineMesure/Leaflet.PolylineMeasure.js"></script>
+
+<!-- Ligação ao ferramentas adicionais -->
+<script src="ext/dom-to-image/src/dom-to-image.js"></script>
+<script src="ext/file-saver/FileSaver.min.js"></script>
+
+<!-- Ligação aos ficheiros geojson-->
+<script src="dist/concelhos_v3.geojson"></script>
+<script src="dist/nutsiii_v3.geojson"></script>
+<script src="dist/sedes.geojson"></script>
+
+<html>
+    <head>
+        <title> WebSIG Areal Editores</title>
+    </head>
+
+    <body class="easyPrint">
+        <div id="map">
+            <script src="ext/leaflet-easyprint/dist/bundle.js"></script>
+            <script src="dist/map.js"></script>
+        </div>
+    </body>
+</html>
