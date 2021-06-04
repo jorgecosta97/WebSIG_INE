@@ -19,7 +19,7 @@ function style_NV_CONC_2019(feature) {
     };
 };
 function popup_NV_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Nados_vi_3.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Nados_vi_3.toFixed(2) + ' Indivíduos</p>');
 };
 //              2011
 function colors_NV_CONC_2011(d) {
@@ -39,7 +39,7 @@ function style_NV_CONC_2011(feature) {
     };
 };
 function popup_NV_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Nados_vi_2.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Nados_vi_2.toFixed(2) + ' Indivíduos</p>');
 };
 //              2001
 function colors_NV_CONC_2001(d) {
@@ -59,10 +59,10 @@ function style_NV_CONC_2001(feature) {
     };
 };
 function popup_NV_CONC_2001(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Nados_vi_1.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Nados_vi_1.toFixed(2) + ' Indivíduos</p>');
 };
 //          Nuts III
-//              2019
+//              201
 function colors_NV_NutsIII_2019(d) {
     return  d > 3063   ? '#004f8a' :
             d > 2131   ? '#006db2' :
@@ -80,7 +80,7 @@ function style_NV_NutsIII_2019(feature) {
     };
 };
 function popup_NV_NutsIII_2019(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Nados_vi_2.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Nados_vi_2.toFixed(2) + ' Indivíduos</p>');
 };
 //              2011
 function colors_NV_NutsIII_2011(d) {
@@ -100,7 +100,7 @@ function style_NV_NutsIII_2011(feature) {
     };
 };
 function popup_NV_NutsIII_2011(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Nados_vi_2.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Nados_vi_2.toFixed(2) + ' Indivíduos</p>');
 };
 //              2001
 function colors_NV_NutsIII_2001(d) {
@@ -120,12 +120,12 @@ function style_NV_NutsIII_2001(feature) {
     };
 };
 function popup_NV_NutsIII_2001(feature, layer){
-    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Nados_vi_1.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Nados-vivos</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Nados_vi_1.toFixed(2) + ' Indivíduos</p>');
 };
 
 //      1.2. Taxa de natalidade (2001, 2011, 2019)
 //          Município
-function colors_TN_CONC(d) {
+function colors_TN_CONC_2019(d) {
     return  d > 8.6   ? '#004f8a' :
             d > 7.4   ? '#006db2' :
             d > 6.4   ? '#00a6e2' :
@@ -135,7 +135,7 @@ function colors_TN_CONC(d) {
 //              2019
 function style_TN_CONC_2019(feature) {
     return {
-        fillColor: colors_TN_CONC(feature.properties.TN2019),
+        fillColor: colors_TN_CONC_2019(feature.properties.TN2019),
         weight: 0.5,
         opacity: 1,
         color: 'black',
@@ -143,12 +143,20 @@ function style_TN_CONC_2019(feature) {
     };
 };
 function popup_TN_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TN2019.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TN2019.toFixed(2) + ' ‰</p>');
 };
 //              2011
+function colors_TN_CONC_2011(d) {
+    return  d > 9.6   ? '#004f8a' :
+            d > 8.3   ? '#006db2' :
+            d > 7.4   ? '#00a6e2' :
+            d > 6     ? '#5ac5f3' :
+                        '#d3edfc';
+};
+
 function style_TN_CONC_2011(feature) {
     return {
-        fillColor: colors_TN_CONC(feature.properties.TN2011),
+        fillColor: colors_TN_CONC_2011(feature.properties.TN2011),
         weight: 0.5,
         opacity: 1,
         color: 'black',
@@ -156,12 +164,20 @@ function style_TN_CONC_2011(feature) {
     };
 };
 function popup_TN_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TN2011.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TN2011.toFixed(2) + ' ‰</p>');
 };
 //              2001
+function colors_TN_CONC_2001(d) {
+    return  d > 11.6  ? '#004f8a' :
+            d > 10.3  ? '#006db2' :
+            d > 8.8   ? '#00a6e2' :
+            d > 7.1   ? '#5ac5f3' :
+                        '#d3edfc';
+};
+
 function style_TN_CONC_2001(feature) {
     return {
-        fillColor: colors_TN_CONC(feature.properties.TN2001),
+        fillColor: colors_TN_CONC_2001(feature.properties.TN2001),
         weight: 0.5,
         opacity: 1,
         color: 'black',
@@ -169,11 +185,11 @@ function style_TN_CONC_2001(feature) {
     };
 };
 function popup_TN_CONC_2001(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TN2001.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TN2001.toFixed(2) + ' ‰</p>');
 };
 
 //          Nuts III
-function colors_TN_NutsIII(d) {
+function colors_TN_NutsIII_2019(d) {
     return  d > 8.16   ? '#004f8a' :
             d > 7.64   ? '#006db2' :
             d > 6.96   ? '#00a6e2' :
@@ -183,7 +199,7 @@ function colors_TN_NutsIII(d) {
 //              2019
 function style_TN_NutsIII_2019(feature) {
     return {
-        fillColor: colors_TN_NutsIII(feature.properties.TN2019),
+        fillColor: colors_TN_NutsIII_2019(feature.properties.TN2019),
         weight: 1,
         opacity: 1,
         color: 'black',
@@ -191,12 +207,20 @@ function style_TN_NutsIII_2019(feature) {
     };
 };
 function popup_TN_NutsIII_2019(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TN2019.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TN2019.toFixed(2) + ' ‰</p>');
 };
 //              2011
+function colors_TN_NutsIII_2011(d) {
+    return  d > 9.0   ? '#004f8a' :
+            d > 8.4    ? '#006db2' :
+            d > 7.9    ? '#00a6e2' :
+            d > 7.0    ? '#5ac5f3' :
+                         '#d3edfc';
+};
+
 function style_TN_NutsIII_2011(feature) {
     return {
-        fillColor: colors_TN_NutsIII(feature.properties.TN2011),
+        fillColor: colors_TN_NutsIII_2011(feature.properties.TN2011),
         weight: 1,
         opacity: 1,
         color: 'black',
@@ -204,12 +228,19 @@ function style_TN_NutsIII_2011(feature) {
     };
 };
 function popup_TN_NutsIII_2011(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TN2011.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TN2011.toFixed(2) + ' ‰</p>');
 };
 //              2001
+function colors_TN_NutsIII_2001(d) {
+    return  d > 12.2   ? '#004f8a' :
+            d > 10.5   ? '#006db2' :
+            d > 9.1    ? '#00a6e2' :
+            d > 7.9    ? '#5ac5f3' :
+                         '#d3edfc';
+};
 function style_TN_NutsIII_2001(feature) {
     return {
-        fillColor: colors_TN_NutsIII(feature.properties.TN2001),
+        fillColor: colors_TN_NutsIII_2001(feature.properties.TN2001),
         weight: 1,
         opacity: 1,
         color: 'black',
@@ -217,7 +248,7 @@ function style_TN_NutsIII_2001(feature) {
     };
 };
 function popup_TN_NutsIII_2001(feature, layer){
-    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TN2001.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de natalidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TN2001.toFixed(2) + ' ‰</p>');
 };
 
 //      1.3. Índice sintético de fecundidade (2001, 2011, 2019)
@@ -240,7 +271,7 @@ function style_ISF_CONC_2019(feature) {
     };
 };
 function popup_ISF_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.ISF2019.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.ISF2019.toFixed(2) + ' Indivíduos</p>');
 };
 //              2011
 function colors_ISF_CONC_2011(d) {
@@ -260,7 +291,7 @@ function style_ISF_CONC_2011(feature) {
     };
 };
 function popup_ISF_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2011.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2011.toFixed(2) + ' Indivíduos</p>');
 };
 //              2001
 function colors_ISF_CONC_2001(d) {
@@ -280,7 +311,7 @@ function style_ISF_CONC_2001(feature) {
     };
 };
 function popup_ISF_CONC_2001(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.ISF2001.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.ISF2001.toFixed(2) + ' Indivíduos</p>');
 };
 //          Nuts III
 //              2019
@@ -301,7 +332,7 @@ function style_ISF_NutsIII_2019(feature) {
     };
 };
 function popup_ISF_NutsIII_2019(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.ISF2019.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.ISF2019.toFixed(2) + ' Indivíduos</p>');
 };
 //              2011
 function colors_ISF_NutsIII_2011(d) {
@@ -321,7 +352,7 @@ function style_ISF_NutsIII_2011(feature) {
     };
 };
 function popup_ISF_NutsIII_2011(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2011.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2011.toFixed(2) + ' Indivíduos</p>');
 };
 //              2001
 function colors_ISF_NutsIII_2001(d) {
@@ -341,17 +372,17 @@ function style_ISF_NutsIII_2001(feature) {
     };
 };
 function popup_ISF_NutsIII_2001(feature, layer){
-    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2001.toFixed(2) + '</p>');
+    layer.bindPopup('<h4>Índice sintético de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ISF2001.toFixed(2) + ' Indivíduos</p>');
 };
 //      1.4. Taxa de fecundidade (2001, 2011, 2019)
 //          Municipio
 //              2019
 function colors_TF_CONC_2019(d) {
-    return  d > 46.1   ? '#004f8a' :
-            d > 42.2   ? '#006db2' :
-            d > 38.8   ? '#00a6e2' :
-            d > 34.6   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 38.3   ? '#004f8a' :
+    d > 34.3   ? '#006db2' :
+    d > 30.9   ? '#00a6e2' :
+    d > 26.1   ? '#5ac5f3' :
+                 '#d3edfc';
 };
 function style_TF_CONC_2019(feature) {
     return {
@@ -363,7 +394,7 @@ function style_TF_CONC_2019(feature) {
     };
 };
 function popup_TF_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TFecGera_2.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TFecGera_2.toFixed(2) + ' ‰</p>');
 };
 //              2011
 function colors_TF_CONC_2011(d) {
@@ -383,15 +414,15 @@ function style_TF_CONC_2011(feature) {
     };
 };
 function popup_TF_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TFecGera_1.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TFecGera_1.toFixed(2) + ' ‰</p>');
 };
 //              2001
 function colors_TF_CONC_2001(d) {
-    return  d > 38.3   ? '#004f8a' :
-            d > 34.3   ? '#006db2' :
-            d > 30.9   ? '#00a6e2' :
-            d > 26.1   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 46.1   ? '#004f8a' :
+    d > 42.2   ? '#006db2' :
+    d > 38.8   ? '#00a6e2' :
+    d > 34.6   ? '#5ac5f3' :
+                 '#d3edfc';
 };
 function style_TF_CONC_2001(feature) {
     return {
@@ -403,17 +434,17 @@ function style_TF_CONC_2001(feature) {
     };
 };
 function popup_TF_CONC_2001(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TFecGeral2.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TFecGeral2.toFixed(2) + ' ‰</p>');
 };
 
 //          Nuts III
 //              2019
 function colors_TF_NutsIII_2019(d) {
-    return  d > 44.2   ? '#004f8a' :
-            d > 41.8   ? '#006db2' :
-            d > 38.9   ? '#00a6e2' :
-            d > 36.1   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 36.8   ? '#004f8a' :
+    d > 34.9   ? '#006db2' :
+    d > 31.7   ? '#00a6e2' :
+    d > 30.6   ? '#5ac5f3' :
+                 '#d3edfc';
 };
 function style_TF_NutsIII_2019(feature) {
     return {
@@ -425,7 +456,7 @@ function style_TF_NutsIII_2019(feature) {
     };
 };
 function popup_TF_NutsIII_2019(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TFecGera_2.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.TFecGera_2.toFixed(2) + ' ‰</p>');
 };
 //              2011
 function colors_TF_NutsIII_2011(d) {
@@ -445,15 +476,15 @@ function style_TF_NutsIII_2011(feature) {
     };
 };
 function popup_TF_NutsIII_2011(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TFecGera_1.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.TFecGera_1.toFixed(2) + ' ‰</p>');
 };
 //              2001
 function colors_TF_NutsIII_2001(d) {
-    return  d > 36.8   ? '#004f8a' :
-            d > 34.9   ? '#006db2' :
-            d > 31.7   ? '#00a6e2' :
-            d > 30.6   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 44.2   ? '#004f8a' :
+    d > 41.8   ? '#006db2' :
+    d > 38.9   ? '#00a6e2' :
+    d > 36.1   ? '#5ac5f3' :
+                 '#d3edfc';
 };
 function style_TF_NutsIII_2001(feature) {
     return {
@@ -465,7 +496,7 @@ function style_TF_NutsIII_2001(feature) {
     };
 };
 function popup_TF_NutsIII_2001(feature, layer){
-    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TFecGeral2.toFixed(2) + '‰</p>');
+    layer.bindPopup('<h4>Taxa de fecundidade</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.TFecGeral2.toFixed(2) + ' ‰</p>');
 };
 
 //  2. Óbitos
@@ -473,12 +504,13 @@ function popup_TF_NutsIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_OT_CONC_2019(d) {
-    return  d > 476   ? '#004f8a' :
-            d > 233   ? '#006db2' :
-            d > 142   ? '#00a6e2' :
-            d > 90    ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 476   ? '#980043' :
+            d > 233   ? '#dd1c77' :
+            d > 142   ? '#df65b0' :
+            d > 90    ? '#d7b5d8' :
+                        '#f1eef6';
 };
+
 function style_OT_CONC_2019(feature) {
     return {
         fillColor: colors_OT_CONC_2019(feature.properties.ObitosTo_1),
@@ -493,11 +525,11 @@ function popup_OT_CONC_2019(feature, layer){
 };
 //              2011
 function colors_OT_CONC_2011(d) {
-    return  d > 463   ? '#004f8a' :
-            d > 228   ? '#006db2' :
-            d > 143   ? '#00a6e2' :
-            d > 93    ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 463   ? '#980043' :
+            d > 228   ? '#dd1c77' :
+            d > 143   ? '#df65b0' :
+            d > 93    ? '#d7b5d8' :
+                        '#f1eef6';
 };
 function style_OT_CONC_2011(feature) {
     return {
@@ -513,11 +545,11 @@ function popup_OT_CONC_2011(feature, layer){
 };
 //              2001
 function colors_OT_CONC_2001(d) {
-    return  d > 458   ? '#004f8a' :
-            d > 232   ? '#006db2' :
-            d > 154   ? '#00a6e2' :
-            d > 99    ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 458   ? '#980043' :
+            d > 232   ? '#dd1c77' :
+            d > 154   ? '#df65b0' :
+            d > 99    ? '#d7b5d8' :
+                        '#f1eef6';
 };
 function style_OT_CONC_2001(feature) {
     return {
@@ -534,11 +566,11 @@ function popup_OT_CONC_2001(feature, layer){
 //          Nuts III
 //              2019
 function colors_OT_NutsIII_2019(d) {
-    return  d > 3721   ? '#004f8a' :
-            d > 3280   ? '#006db2' :
-            d > 2679   ? '#00a6e2' :
-            d > 1904   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 3721   ? '#980043' :
+            d > 3280   ? '#dd1c77' :
+            d > 2679   ? '#df65b0' :
+            d > 1904   ? '#d7b5d8' :
+                         '#f1eef6';
 };
 function style_OT_NutsIII_2019(feature) {
     return {
@@ -553,11 +585,11 @@ function popup_OT_NutsIII_2019(feature, layer){
     layer.bindPopup('<h4>Óbitos totais</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.ObitosTo_1.toFixed(2) + '</p>');
 };
 function colors_OT_NutsIII_2011(d) {
-    return  d > 3483   ? '#004f8a' :
-            d > 3012   ? '#006db2' :
-            d > 2481   ? '#00a6e2' :
-            d > 1888   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 3483   ? '#980043' :
+            d > 3012   ? '#dd1c77' :
+            d > 2481   ? '#df65b0' :
+            d > 1888   ? '#d7b5d8' :
+                         '#f1eef6';
 };
 function style_OT_NutsIII_2011(feature) {
     return {
@@ -571,12 +603,13 @@ function style_OT_NutsIII_2011(feature) {
 function popup_OT_NutsIII_2011(feature, layer){
     layer.bindPopup('<h4>Óbitos totais</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.ObitosTo_2.toFixed(2) + '</p>');
 };
+//              2011
 function colors_OT_NutsIII_2001(d) {
-    return  d > 3500   ? '#004f8a' :
-            d > 3104   ? '#006db2' :
-            d > 2765   ? '#00a6e2' :
-            d > 1993   ? '#5ac5f3' :
-                         '#d3edfc';
+    return  d > 3500   ? '#980043' :
+            d > 3104   ? '#dd1c77' :
+            d > 2765   ? '#df65b0' :
+            d > 1993   ? '#d7b5d8' :
+                         '#f1eef6';
 };
 function style_OT_NutsIII_2001(feature) {
     return {
@@ -594,11 +627,11 @@ function popup_OT_NutsIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_O1_CONC_2019(d) {
-    return  d > 4   ? '#004f8a' :
-            d > 3   ? '#006db2' :
-            d > 2   ? '#00a6e2' :
-            d > 1   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 4   ? '#980043' :
+            d > 3   ? '#dd1c77' :
+            d > 2   ? '#df65b0' :
+            d > 1   ? '#d7b5d8' :
+                      '#f1eef6';
 };
 function style_O1_CONC_2019(feature) {
     return {
@@ -614,11 +647,11 @@ function popup_O1_CONC_2019(feature, layer){
 };
 //              2011
 function colors_O1_CONC_2011(d) {
-    return  d > 4   ? '#004f8a' :
-            d > 3   ? '#006db2' :
-            d > 2   ? '#00a6e2' :
-            d > 1   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 4   ? '#980043' :
+            d > 3   ? '#dd1c77' :
+            d > 2   ? '#df65b0' :
+            d > 1   ? '#d7b5d8' :
+                      '#f1eef6';
 };
 function style_O1_CONC_2011(feature) {
     return {
@@ -634,11 +667,11 @@ function popup_O1_CONC_2011(feature, layer){
 };
 //              2001
 function colors_O1_CONC_2001(d) {
-    return  d > 5   ? '#004f8a' :
-            d > 3   ? '#006db2' :
-            d > 2   ? '#00a6e2' :
-            d > 1   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 5   ? '#980043' :
+            d > 3   ? '#dd1c77' :
+            d > 2   ? '#df65b0' :
+            d > 1   ? '#d7b5d8' :
+                      '#f1eef6';
 };
 function style_O1_CONC_2001(feature) {
     return {
@@ -655,11 +688,11 @@ function popup_O1_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_O1_NUTSIII_2019(d) {
-    return  d > 7   ? '#004f8a' :
-            d > 5   ? '#006db2' :
-            d > 2   ? '#00a6e2' :
-            d > 1   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 7   ? '#980043' :
+            d > 5   ? '#dd1c77' :
+            d > 2   ? '#df65b0' :
+            d > 1   ? '#d7b5d8' :
+                      '#f1eef6';
 };
 function style_O1_NUTSIII_2019(feature) {
     return {
@@ -675,11 +708,11 @@ function popup_O1_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_O1_NUTSIII_2011(d) {
-    return  d > 26   ? '#004f8a' :
-            d > 17   ? '#006db2' :
-            d > 11   ? '#00a6e2' :
-            d > 5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 26   ? '#980043' :
+            d > 17   ? '#dd1c77' :
+            d > 11   ? '#df65b0' :
+            d > 5    ? '#d7b5d8' :
+                       '#f1eef6';
 };
 function style_O1_NUTSIII_2011(feature) {
     return {
@@ -695,11 +728,11 @@ function popup_O1_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_O1_NUTSIII_2001(d) {
-    return  d > 26   ? '#004f8a' :
-            d > 17   ? '#006db2' :
-            d > 11   ? '#00a6e2' :
-            d > 5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 26   ? '#980043' :
+            d > 17   ? '#dd1c77' :
+            d > 11   ? '#df65b0' :
+            d > 5    ? '#d7b5d8' :
+                       '#f1eef6';
 };
 function style_O1_NUTSIII_2001(feature) {
     return {
@@ -896,9 +929,9 @@ function popup_TMI_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_TMI_NUTSIII_2011(d) {
-    return  d > 3.38    ? '#7e1d7c' :
-            d > 2.84    ? '#83559e' :
-            d > 1.98    ? '#8b95c6' :
+    return  d > 3.60    ? '#7e1d7c' :
+            d > 3.00    ? '#83559e' :
+            d > 2.80    ? '#8b95c6' :
             d > 1.70    ? '#b3cce2' :
                           '#ecf4f7';
 };
@@ -916,10 +949,10 @@ function popup_TMI_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_TMI_NUTSIII_2001(d) {
-    return  d > 3.38    ? '#7e1d7c' :
-            d > 2.84    ? '#83559e' :
-            d > 1.98    ? '#8b95c6' :
-            d > 1.70    ? '#b3cce2' :
+    return  d > 6.7    ? '#7e1d7c' :
+            d > 5.1    ? '#83559e' :
+            d > 5    ? '#8b95c6' :
+            d > 3    ? '#b3cce2' :
                           '#ecf4f7';
 };
 function style_TMI_NUTSIII_2001(feature) {
@@ -1659,11 +1692,11 @@ function popup_TCE_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_PR_CONC_2019(d) {
-    return  d > 45076   ? '#004f8a' :
-            d > 20945   ? '#006db2' :
-            d > 11374   ? '#00a6e2' :
-            d > 6679   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 45076   ? '#bd0026' :
+            d > 20945   ? '#f03b20' :
+            d > 11374   ? '#fd8d3c' :
+            d > 6679    ? '#fecc5c' :
+                          '#feffb1';
 };
 function style_PR_CONC_2019(feature) {
     return {
@@ -1675,15 +1708,15 @@ function style_PR_CONC_2019(feature) {
     };
 };
 function popup_PR_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Popresid_2.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Popresid_2 + ' hab.</p>');
 };
 //              2011
 function colors_PR_CONC_2011(d) {
-    return  d > 47729   ? '#004f8a' :
-            d > 20522   ? '#006db2' :
-            d > 10828   ? '#00a6e2' :
-            d > 6049   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 47729   ? '#bd0026' :
+            d > 20522   ? '#f03b20' :
+            d > 10828   ? '#fd8d3c' :
+            d > 6049    ? '#fecc5c' :
+                          '#feffb1';
 };
 function style_PR_CONC_2011(feature) {
     return {
@@ -1695,15 +1728,15 @@ function style_PR_CONC_2011(feature) {
     };
 };
 function popup_PR_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Popresid_1.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Popresid_1 + ' hab.</p>');
 };
 //              2001
 function colors_PR_CONC_2001(d) {
-    return  d > 45076   ? '#004f8a' :
-            d > 20945   ? '#006db2' :
-            d > 11374   ? '#00a6e2' :
-            d > 6679   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 45076   ? '#bd0026' :
+            d > 20945   ? '#f03b20' :
+            d > 11374   ? '#fd8d3c' :
+            d > 6679    ? '#fecc5c' :
+                          '#feffb1';
 };
 function style_PR_CONC_2001(feature) {
     return {
@@ -1715,16 +1748,16 @@ function style_PR_CONC_2001(feature) {
     };
 };
 function popup_PR_CONC_2001(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Popresiden.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>Município: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Popresiden + ' hab.</p>');
 };
 //          NUTSIII
 //              2019
 function colors_PR_NUTSIII_2019(d) {
-    return  d > 400937   ? '#004f8a' :
-            d > 275809   ? '#006db2' :
-            d > 242544   ? '#00a6e2' :
-            d > 126647   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 400937   ? '#bd0026' :
+            d > 275809   ? '#f03b20' :
+            d > 242544   ? '#fd8d3c' :
+            d > 126647   ? '#fecc5c' :
+                           '#feffb1';
 };
 function style_PR_NUTSIII_2019(feature) {
     return {
@@ -1736,15 +1769,15 @@ function style_PR_NUTSIII_2019(feature) {
     };
 };
 function popup_PR_NUTSIII_2019(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Popresid_2.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.Popresid_2 + ' hab.</p>');
 };
 //              2011
 function colors_PR_NUTSIII_2011(d) {
-    return  d > 400937   ? '#004f8a' :
-            d > 275809   ? '#006db2' :
-            d > 242544   ? '#00a6e2' :
-            d > 126647   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 400937   ? '#bd0026' :
+            d > 275809   ? '#f03b20' :
+            d > 242544   ? '#fd8d3c' :
+            d > 126647   ? '#fecc5c' :
+                           '#feffb1';
 };
 function style_PR_NUTSIII_2011(feature) {
     return {
@@ -1756,15 +1789,15 @@ function style_PR_NUTSIII_2011(feature) {
     };
 };
 function popup_PR_NUTSIII_2011(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Popresiden.toFixed(1) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.Popresiden + ' hab.</p>');
 };
 //              2001
 function colors_PR_NUTSIII_2001(d) {
-    return  d > 400937   ? '#004f8a' :
-            d > 275809   ? '#006db2' :
-            d > 242544   ? '#00a6e2' :
-            d > 126647   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 400937   ? '#bd0026' :
+            d > 275809   ? '#f03b20' :
+            d > 242544   ? '#fd8d3c' :
+            d > 126647   ? '#fecc5c' :
+                           '#feffb1';
 };
 function style_PR_NUTSIII_2001(feature) {
     return {
@@ -1776,22 +1809,22 @@ function style_PR_NUTSIII_2001(feature) {
     };
 };
 function popup_PR_NUTSIII_2001(feature, layer){
-    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Popresiden.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População residente</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.Popresiden + ' hab.</p>');
 };
 
 //      4.2. Densidade populacional (2001, 2011, 2019) [done]
 //          Municipio
-function colors_DP_CONC(d) {
+//              2019
+function colors_DP_CONC_2019(d) {
     return d > 142  ? '#bd0026' :
-           d > 67   ? '#fecc5c' :
+           d > 67   ? '#f03b20' :
            d > 44   ? '#fd8d3c' :
            d > 28   ? '#fecc5c' :
-                      '#ffffb2';
+                      '#feffb1';
 };
-//              2019
 function style_DP_CONC_2019(feature) {
     return {
-        fillColor: colors_DP_CONC(feature.properties.DP2019),
+        fillColor: colors_DP_CONC_2019(feature.properties.DP2019),
         weight: 0.5,
         opacity: 1,
         color: '#000000',
@@ -1799,12 +1832,19 @@ function style_DP_CONC_2019(feature) {
     };
 };
 function popup_DP_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>Densidade populacional</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.DP2019.toFixed(2) + ' hab./km<sup>2</sup></p>');
+    layer.bindPopup('<h4>Densidade populacional</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.DP2019 + ' hab./km<sup>2</sup></p>');
 };
 //              2011
+function colors_DP_CONC_2011(d) {
+return  d > 249.1    ?   '#bd0026' :
+        d > 103.8    ?   '#f03b20' :
+        d > 48.1     ?   '#fd8d3c' :
+        d > 21       ?   '#fecc5c' :
+                         '#feffb1';
+};
 function style_DP_CONC_2011(feature) {
     return {
-        fillColor: colors_DP_CONC(feature.properties.DP2011),
+        fillColor: colors_DP_CONC_2011(feature.properties.DP2011),
         weight: 0.5,
         opacity: 1,
         color: '#000000',
@@ -1815,9 +1855,16 @@ function popup_DP_CONC_2011(feature, layer){
     layer.bindPopup('<h4>Densidade populacional</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.DP2011.toFixed(2) + ' hab./km<sup>2</sup></p>');
 };
 //              2001
+function colors_DP_CONC_2001(d) {
+    return  d > 226      ?   '#bd0026' :
+            d > 103.5    ?   '#f03b20' :
+            d > 51.7     ?   '#fd8d3c' :
+            d > 22.5     ?   '#fecc5c' :
+                             '#feffb1';
+};
 function style_DP_CONC_2001(feature) {
     return {
-        fillColor: colors_DP_CONC(feature.properties.DP2001),
+        fillColor: colors_DP_CONC_2001(feature.properties.DP2001),
         weight: 0.5,
         opacity: 1,
         color: '#000000',
@@ -1829,17 +1876,17 @@ function popup_DP_CONC_2001(feature, layer){
 };
 
 //          Nuts III
-function colors_DP_NutsIII(d) {
+//              2019
+function colors_DP_NutsIII_2019(d) {
     return d > 222.3    ?   '#bd0026' :
-           d > 100.9    ?   '#fecc5c' :
+           d > 100.9    ?   '#f03b20' :
            d > 54       ?   '#fd8d3c' :
            d > 19.9     ?   '#fecc5c' :
-                            '#ffffb2';
+                            '#feffb1';
 };
-//              2019
 function style_DP_NUTSIII_2019(feature) {
     return {
-        fillColor: colors_DP_NutsIII(feature.properties.DP2019),
+        fillColor: colors_DP_NutsIII_2019(feature.properties.DP2019),
         weight: 1,
         opacity: 1,
         color: '#000000',
@@ -1850,9 +1897,16 @@ function popup_DP_NUTSIII_2019(feature, layer){
     layer.bindPopup('<h4>Densidade populacional</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.DP2019.toFixed(2) + ' hab./km<sup>2</sup></p>');
 };
 //              2011
+function colors_DP_NutsIII_2011(d) {
+    return d > 236.5    ?   '#bd0026' :
+           d > 106.4    ?   '#f03b20' :
+           d > 57.9     ?   '#fd8d3c' :
+           d > 21.2     ?   '#fecc5c' :
+                            '#feffb1';
+};
 function style_DP_NUTSIII_2011(feature) {
     return {
-        fillColor: colors_DP_NutsIII(feature.properties.DP2011),
+        fillColor: colors_DP_NutsIII_2011(feature.properties.DP2011),
         weight: 1,
         opacity: 1,
         color: '#000000',
@@ -1863,9 +1917,16 @@ function popup_DP_NUTSIII_2011(feature, layer){
     layer.bindPopup('<h4>Densidade populacional</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.DP2011.toFixed(2) + ' hab./km<sup>2</sup></p>');
 };
 //              2001
+function colors_DP_NutsIII_2001(d) {
+    return d > 236.8    ?   '#bd0026' :
+           d > 108.8    ?   '#f03b20' :
+           d > 56.4     ?   '#fd8d3c' :
+           d > 22.9     ?   '#fecc5c' :
+                            '#feffb1';
+};
 function style_DP_NUTSIII_2001(feature) {
     return {
-        fillColor: colors_DP_NutsIII(feature.properties.DP2001),
+        fillColor: colors_DP_NutsIII_2001(feature.properties.DP2001),
         weight: 1,
         opacity: 1,
         color: '#000000',
@@ -1882,12 +1943,13 @@ function popup_DP_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_PEL_CONC_2019(d) {
-    return  d > 1495   ? '#004f8a' :
-            d > 461   ? '#006db2' :
-            d > 208   ? '#00a6e2' :
-            d > 90   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 1495  ? '#bd0026' :
+            d > 461   ? '#f03b20' :
+            d > 208   ? '#fd8d3c' :
+            d > 90    ? '#fecc5d' :
+                        '#feffb1';
 };
+
 function style_PEL_CONC_2019(feature) {
     return {
         fillColor: colors_PEL_CONC_2019(feature.properties.PopEstra_2),
@@ -1898,15 +1960,15 @@ function style_PEL_CONC_2019(feature) {
     };
 };
 function popup_PEL_CONC_2019(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.PopEstra_2.toFixed(2) + ' hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.PopEstra_2 + ' hab.</p>');
 };
 //              2011
 function colors_PEL_CONC_2011(d) {
-    return  d > 1119   ? '#004f8a' :
-            d > 395   ? '#006db2' :
-            d > 159   ? '#00a6e2' :
-            d > 78   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 1119  ? '#bd0026' :
+            d > 395   ? '#f03b20' :
+            d > 159   ? '#fd8d3c' :
+            d > 78    ? '#fecc5d' :
+                        '#feffb1';
 };
 function style_PEL_CONC_2011(feature) {
     return {
@@ -1918,15 +1980,15 @@ function style_PEL_CONC_2011(feature) {
     };
 };
 function popup_PEL_CONC_2011(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.PopEstra_1.toFixed(2) + ' hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.PopEstra_1 + ' hab.</p>');
 };
 //              2008
 function colors_PEL_CONC_2008(d) {
-    return  d > 1100   ? '#004f8a' :
-            d > 346   ? '#006db2' :
-            d > 129   ? '#00a6e2' :
-            d > 62   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 1100  ? '#bd0026' :
+            d > 346   ? '#f03b20' :
+            d > 129   ? '#fd8d3c' :
+            d > 62    ? '#fecc5d' :
+                        '#feffb1';
 };
 function style_PEL_CONC_2008(feature) {
     return {
@@ -1938,16 +2000,16 @@ function style_PEL_CONC_2008(feature) {
     };
 };
 function popup_PEL_CONC_2008(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2008) = ' + feature.properties.PopEstrang.toFixed(2) + 'hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>Município: ' + feature.properties.Anos + ' (2008) = ' + feature.properties.PopEstrang + 'hab.</p>');
 };
 //          NUTSIII
 //              2019
 function colors_PEL_NUTSIII_2019(d) {
-    return  d > 12995   ? '#004f8a' :
-            d > 8579   ? '#006db2' :
-            d > 4640   ? '#00a6e2' :
-            d > 2789   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 12995  ? '#bd0026' :
+            d > 8579   ? '#f03b20' :
+            d > 4640   ? '#fd8d3c' :
+            d > 2789   ? '#fecc5d' :
+                         '#feffb1';
 };
 function style_PEL_NUTSIII_2019(feature) {
     return {
@@ -1959,15 +2021,15 @@ function style_PEL_NUTSIII_2019(feature) {
     };
 };
 function popup_PEL_NUTSIII_2019(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.PopEstra_2.toFixed(2) + ' hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2019) = ' + feature.properties.PopEstra_2 + ' hab.</p>');
 };
 //              2011
 function colors_PEL_NUTSIII_2011(d) {
-    return  d > 10145   ? '#004f8a' :
-            d > 5367   ? '#006db2' :
-            d > 2960   ? '#00a6e2' :
-            d > 2207   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 10145  ? '#bd0026' :
+            d > 5367   ? '#f03b20' :
+            d > 2960   ? '#fd8d3c' :
+            d > 2207   ? '#fecc5d' :
+                         '#feffb1';
 };
 function style_PEL_NUTSIII_2011(feature) {
     return {
@@ -1979,15 +2041,15 @@ function style_PEL_NUTSIII_2011(feature) {
     };
 };
 function popup_PEL_NUTSIII_2011(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.PopEstrang.toFixed(1) + ' hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.PopEstrang + ' hab.</p>');
 };
 //              2008
 function colors_PEL_NUTSIII_2008(d) {
-    return  d > 10145   ? '#004f8a' :
-            d > 5367   ? '#006db2' :
-            d > 2960   ? '#00a6e2' :
-            d > 2207   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 10145  ? '#bd0026' :
+            d > 5367   ? '#f03b20' :
+            d > 2960   ? '#fd8d3c' :
+            d > 2207   ? '#fecc5d' :
+                         '#feffb1';
 };
 function style_PEL_NUTSIII_2008(feature) {
     return {
@@ -1999,7 +2061,7 @@ function style_PEL_NUTSIII_2008(feature) {
     };
 };
 function popup_PEL_NUTSIII_2008(feature, layer){
-    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2008) = ' + feature.properties.PopEstrang.toFixed(2) + ' hab.</p>');
+    layer.bindPopup('<h4>População estrangeira com estatuto legal</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2008) = ' + feature.properties.PopEstrang + ' hab.</p>');
 };
 
 //  6. Casamentos e divóricos
@@ -2008,7 +2070,7 @@ function popup_PEL_NUTSIII_2008(feature, layer){
 //              2019
 function colors_TD_CONC_2019(d) {
     return  d > 2.3   ? '#004f8a' :
-            d > 2   ? '#006db2' :
+            d > 2     ? '#006db2' :
             d > 1.7   ? '#00a6e2' :
             d > 1.3   ? '#5ac5f3' :
                         '#d3edfc';
@@ -2387,11 +2449,11 @@ function popup_IE_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_IL_CONC_2019(d) {
-    return  d > 57.8   ? '#004f8a' :
-            d > 54.4   ? '#006db2' :
-            d > 50.9   ? '#00a6e2' :
-            d > 46.5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 57.8   ? '#007038' :
+            d > 54.4   ? '#239b37' :
+            d > 50.9   ? '#a0b939' :
+            d > 46.5   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_CONC_2019(feature) {
     return {
@@ -2407,11 +2469,11 @@ function popup_IL_CONC_2019(feature, layer){
 };
 //              2011
 function colors_IL_CONC_2011(d) {
-    return  d > 55.5   ? '#004f8a' :
-            d > 52.5   ? '#006db2' :
-            d > 50.1   ? '#00a6e2' :
-            d > 46.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 55.5   ? '#007038' :
+            d > 52.5   ? '#239b37' :
+            d > 50.1   ? '#a0b939' :
+            d > 46.2   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_CONC_2011(feature) {
     return {
@@ -2427,11 +2489,11 @@ function popup_IL_CONC_2011(feature, layer){
 };
 //              2001
 function colors_IL_CONC_2001(d) {
-    return  d > 46.6   ? '#004f8a' :
-            d > 44.1   ? '#006db2' :
-            d > 42.4   ? '#00a6e2' :
-            d > 40.5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 46.6   ? '#007038' :
+            d > 44.1   ? '#239b37' :
+            d > 42.4   ? '#a0b939' :
+            d > 40.5   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_CONC_2001(feature) {
     return {
@@ -2448,11 +2510,11 @@ function popup_IL_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_IL_NUTSIII_2019(d) {
-    return  d > 55   ? '#004f8a' :
-            d > 52.9   ? '#006db2' :
-            d > 49.9   ? '#00a6e2' :
-            d > 44.8   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 55     ? '#007038' :
+            d > 52.9   ? '#239b37' :
+            d > 49.9   ? '#a0b939' :
+            d > 44.8   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_NUTSIII_2019(feature) {
     return {
@@ -2468,11 +2530,11 @@ function popup_IL_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_IL_NUTSIII_2011(d) {
-    return  d > 44.6   ? '#004f8a' :
-            d > 43.5   ? '#006db2' :
-            d > 41.9   ? '#00a6e2' :
-            d > 40.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 44.6   ? '#007038' :
+            d > 43.5   ? '#239b37' :
+            d > 41.9   ? '#a0b939' :
+            d > 40.2   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_NUTSIII_2011(feature) {
     return {
@@ -2488,11 +2550,11 @@ function popup_IL_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_IL_NUTSIII_2001(d) {
-    return  d > 44.6   ? '#004f8a' :
-            d > 43.5   ? '#006db2' :
-            d > 41.9   ? '#00a6e2' :
-            d > 40.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 44.6   ? '#007038' :
+            d > 43.5   ? '#239b37' :
+            d > 41.9   ? '#a0b939' :
+            d > 40.2   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IL_NUTSIII_2001(feature) {
     return {
@@ -2511,11 +2573,11 @@ function popup_IL_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_IDJ_CONC_2019(d) {
-    return  d > 21.2   ? '#004f8a' :
-            d > 19.5   ? '#006db2' :
-            d > 17.9   ? '#00a6e2' :
-            d > 16.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 21.2   ? '#007038' :
+            d > 19.5   ? '#239b37' :
+            d > 17.9   ? '#a0b939' :
+            d > 16.2   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_CONC_2019(feature) {
     return {
@@ -2531,11 +2593,11 @@ function popup_IDJ_CONC_2019(feature, layer){
 };
 //              2011
 function colors_IDJ_CONC_2011(d) {
-    return  d > 24   ? '#004f8a' :
-            d > 22.3   ? '#006db2' :
-            d > 20.8   ? '#00a6e2' :
-            d > 19   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 24     ? '#007038' :
+            d > 22.3   ? '#239b37' :
+            d > 20.8   ? '#a0b939' :
+            d > 19     ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_CONC_2011(feature) {
     return {
@@ -2551,11 +2613,11 @@ function popup_IDJ_CONC_2011(feature, layer){
 };
 //              2001
 function colors_IDJ_CONC_2001(d) {
-    return  d > 26.6   ? '#004f8a' :
-            d > 24.1   ? '#006db2' :
-            d > 22.5   ? '#00a6e2' :
-            d > 20.9   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 26.6   ? '#007038' :
+            d > 24.1   ? '#239b37' :
+            d > 22.5   ? '#a0b939' :
+            d > 20.9   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_CONC_2001(feature) {
     return {
@@ -2572,11 +2634,11 @@ function popup_IDJ_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_IDJ_NUTSIII_2019(d) {
-    return  d > 20.7   ? '#004f8a' :
-            d > 19.7   ? '#006db2' :
-            d > 18.8   ? '#00a6e2' :
-            d > 17.6   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 20.7   ? '#007038' :
+            d > 19.7   ? '#239b37' :
+            d > 18.8   ? '#a0b939' :
+            d > 17.6   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_NUTSIII_2019(feature) {
     return {
@@ -2592,11 +2654,11 @@ function popup_IDJ_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_IDJ_NUTSIII_2011(d) {
-    return  d > 28.2   ? '#004f8a' :
-            d > 24.2   ? '#006db2' :
-            d > 22.3   ? '#00a6e2' :
-            d > 21.9   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 28.2   ? '#007038' :
+            d > 24.2   ? '#239b37' :
+            d > 22.3   ? '#a0b939' :
+            d > 21.9   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_NUTSIII_2011(feature) {
     return {
@@ -2612,11 +2674,11 @@ function popup_IDJ_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_IDJ_NUTSIII_2001(d) {
-    return  d > 28.2   ? '#004f8a' :
-            d > 24.2   ? '#006db2' :
-            d > 22.3   ? '#00a6e2' :
-            d > 21.9   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 28.2   ? '#007038' :
+            d > 24.2   ? '#239b37' :
+            d > 22.3   ? '#a0b939' :
+            d > 21.9   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDJ_NUTSIII_2001(feature) {
     return {
@@ -2635,11 +2697,11 @@ function popup_IDJ_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_IDI_CONC_2019(d) {
-    return  d > 49.8   ? '#004f8a' :
-            d > 41.7   ? '#006db2' :
-            d > 35.5   ? '#00a6e2' :
-            d > 29.4   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 49.8   ? '#007038' :
+            d > 41.7   ? '#239b37' :
+            d > 35.5   ? '#a0b939' :
+            d > 29.4   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_CONC_2019(feature) {
     return {
@@ -2655,11 +2717,11 @@ function popup_IDI_CONC_2019(feature, layer){
 };
 //              2011
 function colors_IDI_CONC_2011(d) {
-    return  d > 46.5   ? '#004f8a' :
-            d > 37.9   ? '#006db2' :
-            d > 31.3   ? '#00a6e2' :
-            d > 25.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 46.5   ? '#007038' :
+            d > 37.9   ? '#239b37' :
+            d > 31.3   ? '#a0b939' :
+            d > 25.2   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_CONC_2011(feature) {
     return {
@@ -2675,11 +2737,11 @@ function popup_IDI_CONC_2011(feature, layer){
 };
 //              2001
 function colors_IDI_CONC_2001(d) {
-    return  d > 42.9   ? '#004f8a' :
-            d > 34.6   ? '#006db2' :
-            d > 28.7   ? '#00a6e2' :
-            d > 22.4   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 42.9   ? '#007038' :
+            d > 34.6   ? '#239b37' :
+            d > 28.7   ? '#a0b939' :
+            d > 22.4   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_CONC_2001(feature) {
     return {
@@ -2696,11 +2758,11 @@ function popup_IDI_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_IDI_NUTSIII_2019(d) {
-    return  d > 43   ? '#004f8a' :
-            d > 39.9   ? '#006db2' :
-            d > 35.3   ? '#00a6e2' :
-            d > 26.8   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 43     ? '#007038' :
+            d > 39.9   ? '#239b37' :
+            d > 35.3   ? '#a0b939' :
+            d > 26.8   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_NUTSIII_2019(feature) {
     return {
@@ -2716,11 +2778,11 @@ function popup_IDI_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_IDI_NUTSIII_2011(d) {
-    return  d > 35.7   ? '#004f8a' :
-            d > 30.9   ? '#006db2' :
-            d > 27.2   ? '#00a6e2' :
-            d > 19.8   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 35.7   ? '#007038' :
+            d > 30.9   ? '#239b37' :
+            d > 27.2   ? '#a0b939' :
+            d > 19.8   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_NUTSIII_2011(feature) {
     return {
@@ -2736,11 +2798,11 @@ function popup_IDI_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_IDI_NUTSIII_2001(d) {
-    return  d > 35.7   ? '#004f8a' :
-            d > 30.9   ? '#006db2' :
-            d > 27.2   ? '#00a6e2' :
-            d > 19.8   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 35.7   ? '#007038' :
+            d > 30.9   ? '#239b37' :
+            d > 27.2   ? '#a0b939' :
+            d > 19.8   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDI_NUTSIII_2001(feature) {
     return {
@@ -2758,11 +2820,11 @@ function popup_IDI_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_IDT_CONC_2019(d) {
-    return  d > 66.5   ? '#004f8a' :
-            d > 60.5   ? '#006db2' :
-            d > 54.8   ? '#00a6e2' :
-            d > 49.3   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 66.5   ? '#007038' :
+            d > 60.5   ? '#239b37' :
+            d > 54.8   ? '#a0b939' :
+            d > 49.3   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_CONC_2019(feature) {
     return {
@@ -2778,11 +2840,11 @@ function popup_IDT_CONC_2019(feature, layer){
 };
 //              2011
 function colors_IDT_CONC_2011(d) {
-    return  d > 66   ? '#004f8a' :
-            d > 58.9   ? '#006db2' :
-            d > 54.3   ? '#00a6e2' :
-            d > 49   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 66     ? '#007038' :
+            d > 58.9   ? '#239b37' :
+            d > 54.3   ? '#a0b939' :
+            d > 49     ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_CONC_2011(feature) {
     return {
@@ -2798,11 +2860,11 @@ function popup_IDT_CONC_2011(feature, layer){
 };
 //              2001
 function colors_IDT_CONC_2001(d) {
-    return  d > 65.7   ? '#004f8a' :
-            d > 58.5   ? '#006db2' :
-            d > 52.8   ? '#00a6e2' :
-            d > 47.7   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 65.7   ? '#007038' :
+            d > 58.5   ? '#239b37' :
+            d > 52.8   ? '#a0b939' :
+            d > 47.7   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_CONC_2001(feature) {
     return {
@@ -2819,11 +2881,11 @@ function popup_IDT_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_IDT_NUTSIII_2019(d) {
-    return  d > 62.7   ? '#004f8a' :
-            d > 59.5   ? '#006db2' :
-            d > 55.7   ? '#00a6e2' :
-            d > 45.5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 62.7   ? '#007038' :
+            d > 59.5   ? '#239b37' :
+            d > 55.7   ? '#a0b939' :
+            d > 45.5   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_NUTSIII_2019(feature) {
     return {
@@ -2839,11 +2901,11 @@ function popup_IDT_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_IDT_NUTSIII_2011(d) {
-    return  d > 58.3   ? '#004f8a' :
-            d > 54.4   ? '#006db2' :
-            d > 51.1   ? '#00a6e2' :
-            d > 47.7   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 58.3   ? '#007038' :
+            d > 54.4   ? '#239b37' :
+            d > 51.1   ? '#a0b939' :
+            d > 47.7   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_NUTSIII_2011(feature) {
     return {
@@ -2859,11 +2921,11 @@ function popup_IDT_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_IDT_NUTSIII_2001(d) {
-    return  d > 58.3   ? '#004f8a' :
-            d > 54.4   ? '#006db2' :
-            d > 51.1   ? '#00a6e2' :
-            d > 47.7   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 58.3   ? '#007038' :
+            d > 54.4   ? '#239b37' :
+            d > 51.1   ? '#a0b939' :
+            d > 47.7   ? '#c3da82' :
+                         '#d6e9cd';
 };
 function style_IDT_NUTSIII_2001(feature) {
     return {
@@ -2882,11 +2944,11 @@ function popup_IDT_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_ISP_CONC_2019(d) {
-    return  d > 3.5   ? '#004f8a' :
-            d > 2.9   ? '#006db2' :
-            d > 2.4   ? '#00a6e2' :
-            d > 2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 3.5   ? '#007038' :
+            d > 2.9   ? '#239b37' :
+            d > 2.4   ? '#a0b939' :
+            d > 2     ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_CONC_2019(feature) {
     return {
@@ -2902,11 +2964,11 @@ function popup_ISP_CONC_2019(feature, layer){
 };
 //              2011
 function colors_ISP_CONC_2011(d) {
-    return  d > 4.1   ? '#004f8a' :
-            d > 3.3   ? '#006db2' :
-            d > 2.7   ? '#00a6e2' :
-            d > 2.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 4.1   ? '#007038' :
+            d > 3.3   ? '#239b37' :
+            d > 2.7   ? '#a0b939' :
+            d > 2.2   ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_CONC_2011(feature) {
     return {
@@ -2922,11 +2984,11 @@ function popup_ISP_CONC_2011(feature, layer){
 };
 //              2001
 function colors_ISP_CONC_2001(d) {
-    return  d > 4.5   ? '#004f8a' :
-            d > 3.5   ? '#006db2' :
-            d > 2.9   ? '#00a6e2' :
-            d > 2.3   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 4.5   ? '#007038' :
+            d > 3.5   ? '#239b37' :
+            d > 2.9   ? '#a0b939' :
+            d > 2.3   ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_CONC_2001(feature) {
     return {
@@ -2943,11 +3005,11 @@ function popup_ISP_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_ISP_NUTSIII_2019(d) {
-    return  d > 3.7   ? '#004f8a' :
-            d > 2.9   ? '#006db2' :
-            d > 2.5   ? '#00a6e2' :
-            d > 2.2   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 3.7   ? '#007038' :
+            d > 2.9   ? '#239b37' :
+            d > 2.5   ? '#a0b939' :
+            d > 2.2   ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_NUTSIII_2019(feature) {
     return {
@@ -2963,11 +3025,11 @@ function popup_ISP_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_ISP_NUTSIII_2011(d) {
-    return  d > 5.1   ? '#004f8a' :
-            d > 3.7   ? '#006db2' :
-            d > 3.2   ? '#00a6e2' :
-            d > 2.7   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 5.1   ? '#007038' :
+            d > 3.7   ? '#239b37' :
+            d > 3.2   ? '#a0b939' :
+            d > 2.7   ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_NUTSIII_2011(feature) {
     return {
@@ -2983,11 +3045,11 @@ function popup_ISP_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_ISP_NUTSIII_2001(d) {
-    return  d > 5.1   ? '#004f8a' :
-            d > 3.7   ? '#006db2' :
-            d > 3.2   ? '#00a6e2' :
-            d > 2.7   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 5.1   ? '#007038' :
+            d > 3.7   ? '#239b37' :
+            d > 3.2   ? '#a0b939' :
+            d > 2.7   ? '#c3da82' :
+                        '#d6e9cd';
 };
 function style_ISP_NUTSIII_2001(feature) {
     return {
@@ -3001,4 +3063,3 @@ function style_ISP_NUTSIII_2001(feature) {
 function popup_ISP_NUTSIII_2001(feature, layer){
     layer.bindPopup('<h4>Índice de sustentabilidade potencial</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.ISP2001.toFixed(2) + ' N.º</p>');
 };
-

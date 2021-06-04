@@ -690,6 +690,7 @@ L.control.layers(baseMaps, {}, {
 var layers = [
     {
         groupName : "Nascimentos e fecundidade  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : true,
         layers    : {
             //1.1. Nados-vivos
             "Nados-vivos, Município (2019)": L_CONC_NV2019,
@@ -722,6 +723,7 @@ var layers = [
         }
     },{
         groupName : "Óbitos  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : false,
         layers    : {
             //Obitos totais
             "Óbitos totais, Município (2019)": L_CONC_OT2019,
@@ -754,6 +756,7 @@ var layers = [
         }
     },{
         groupName : "Evolução da população  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : false,
         layers    : {
             //Crescimento natural
             "Crescimento Natural, Município (2019)": L_CONC_CN2019,
@@ -800,6 +803,7 @@ var layers = [
         }
     },{
         groupName : "População residente  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : false,
         layers    : {
             //Populacao residente
             "População residente, Município (2019)": L_CONC_PR2019,
@@ -818,6 +822,7 @@ var layers = [
         }
     },{
         groupName : "População estrangeira  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : false,
         layers    : {
             //População estrangeira com estatuto legal
             "População estrangeira com estatuto legal, Município (2019)": L_CONC_PEL2019,
@@ -848,6 +853,7 @@ var layers = [
         }
     },{
         groupName :"Indicadores de envelhecimento  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        expanded : false,
         layers    : {
             //Indice de envelhecimento
             "Índice de envelhecimento, Município (2019)": L_IE2019,
@@ -898,7 +904,7 @@ var layers = [
 var overlayers = [
     { 
         groupName : "Elementos adicionais",
-        expanded : true,
+        expanded : false,
         layers    : {
             "Capitais de Distrito": L_sedes_distrito
         }
@@ -909,7 +915,7 @@ var options = {
     container_width 	: "320px",
     container_maxHeight : "450px", 
     group_maxHeight     : "700px",
-    exclusive       	: false
+    exclusive       	: true
 };
 
 L.Control.styledLayerControl(layers, overlayers, options).addTo(map);
@@ -965,7 +971,7 @@ L.control.polylineMeasure ({position:'topleft', unit:'metres', showBearings:fals
 var legenda_NV_CONC_2019 = L.control({ position: "bottomleft" });
 legenda_NV_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[361; 5926]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[132; 361[</span><br>';
@@ -977,7 +983,7 @@ legenda_NV_CONC_2019.onAdd = function(map) {
 var legenda_NV_CONC_2011 = L.control({ position: "bottomleft" });
 legenda_NV_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[448; 5733]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[169; 448[</span><br>';
@@ -989,7 +995,7 @@ legenda_NV_CONC_2011.onAdd = function(map) {
 var legenda_NV_CONC_2001 = L.control({ position: "bottomleft" });
 legenda_NV_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[511; 5604]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[206; 511[</span><br>';
@@ -1001,7 +1007,7 @@ legenda_NV_CONC_2001.onAdd = function(map) {
 var legenda_NV_NUTS_2019 = L.control({ position: "bottomleft" });
 legenda_NV_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[3063; 29652]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[2131; 3063[</span><br>';
@@ -1013,7 +1019,7 @@ legenda_NV_NUTS_2019.onAdd = function(map) {
 var legenda_NV_NUTS_2011 = L.control({ position: "bottomleft" });
 legenda_NV_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[3667; 31127]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[2467; 3667[</span><br>';
@@ -1025,7 +1031,7 @@ legenda_NV_NUTS_2011.onAdd = function(map) {
 var legenda_NV_NUTS_2001 = L.control({ position: "bottomleft" });
 legenda_NV_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Nados-vivos</h5>";
+    div.innerHTML += "<h5>Nados-vivos (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[4164; 31604]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[3129; 4164[</span><br>';
@@ -1053,11 +1059,11 @@ legenda_TN_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de natalidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[8.6; 12]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[7.4; 8.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[6.4; 7.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[5.3; 6.4[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.5; 5.3 [</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[9.6; 14.8]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[8.3; 9.6[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[7.4; 8.3[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6.0; 7.4[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.2; 6.0[</span><br>';
     return div;
 };
 var legenda_TN_CONC_2001 = L.control({ position: "bottomleft" });
@@ -1065,11 +1071,11 @@ legenda_TN_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de natalidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[8.6; 12]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[7.4; 8.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[6.4; 7.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[5.3; 6.4[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.5; 5.3 [</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[11.6 17.8]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[10.3; 11.6[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[8.8; 10.3[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[7.1; 8.8[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.7; 7.1[</span><br>';
     return div;
 };
 var legenda_TN_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1089,11 +1095,11 @@ legenda_TN_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de natalidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[8.16; 10.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[7.64; 8.16[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[6.96; 7.64[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6.1; 6.96[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[4.9; 6.1 [</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[9.0; 11.1]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[8.4; 9.0[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[7.9; 8.4[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[7.0; 7.9[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[5.6; 7.0 [</span><br>';
     return div;
 };
 var legenda_TN_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1101,18 +1107,18 @@ legenda_TN_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de natalidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[8,16; 10,4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[7,64; 8,16[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[6,96; 7,64[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6,1; 6,96[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[4,9; 6,1 [</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[12.2; 12.9]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[10.5; 12.2[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[9.1; 10.5[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[7.9; 9.1[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[7.2; 7.9 [</span><br>';
     return div;
 };
 //      1.3 Índice sintético de fecundidade
 var legenda_ISF_CONC_2019 = L.control({ position: "bottomleft" });
 legenda_ISF_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,46; 2,32]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,29; 1,46[</span><br>';
@@ -1124,7 +1130,7 @@ legenda_ISF_CONC_2019.onAdd = function(map) {
 var legenda_ISF_CONC_2011 = L.control({ position: "bottomleft" });
 legenda_ISF_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,43; 1,91]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,29; 1,43[</span><br>';
@@ -1136,7 +1142,7 @@ legenda_ISF_CONC_2011.onAdd = function(map) {
 var legenda_ISF_CONC_2001 = L.control({ position: "bottomleft" });
 legenda_ISF_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,55; 2,15]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,45; 1,55[</span><br>';
@@ -1148,7 +1154,7 @@ legenda_ISF_CONC_2001.onAdd = function(map) {
 var legenda_ISF_NUTS_2019 = L.control({ position: "bottomleft" });
 legenda_ISF_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,38; 1,74]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,30; 1,38[</span><br>';
@@ -1160,7 +1166,7 @@ legenda_ISF_NUTS_2019.onAdd = function(map) {
 var legenda_ISF_NUTS_2011 = L.control({ position: "bottomleft" });
 legenda_ISF_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,40; 1,57]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,28; 1,40[</span><br>';
@@ -1172,7 +1178,7 @@ legenda_ISF_NUTS_2011.onAdd = function(map) {
 var legenda_ISF_NUTS_2001 = L.control({ position: "bottomleft" });
 legenda_ISF_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>Índice sintético de fecundidade</h5>";
+    div.innerHTML += "<h5>Índice sintético de fecundidade (Indivíduos)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
     div.innerHTML += '<i style="background: #004f8a"></i><span>[1,56; 1,67]</span><br>';
     div.innerHTML += '<i style="background: #006db2"></i><span>[1,45; 1,56[</span><br>';
@@ -1188,11 +1194,11 @@ legenda_TF_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de fecundidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[46,1; 68,6]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[42,2; 46,1[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[38,8; 42,2[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[34,6; 38,8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[16,2; 34,6[</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[38,3; 62,1]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[34,3; 38,3[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[30,9; 34,3[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[26,1; 30,9[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[9,5; 26,1[</span><br>';
     return div;
 };
 var legenda_TF_CONC_2011 = L.control({ position: "bottomleft" });
@@ -1212,11 +1218,11 @@ legenda_TF_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de fecundidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[38,3; 62,1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[34,3; 38,3[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[30,9; 34,3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[26,1; 30,9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[9,5; 26,1[</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[46,1; 68,6]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[42,2; 46,1[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[38,8; 42,2[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[34,6; 38,8[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[16,2; 34,6[</span><br>';
     return div;
 };
 var legenda_TF_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1224,11 +1230,11 @@ legenda_TF_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de fecundidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[44,2; 50,4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[41,8; 44,2[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[38,9; 41,8[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[36,1; 38,9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[32,8; 36,1[</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[36,8; 46,5]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[34,9; 36,8[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[31,7; 34,9[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[30,6; 31,7[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[25,9; 30,6[</span><br>';
     return div;
 };
 var legenda_TF_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -1248,16 +1254,13 @@ legenda_TF_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de fecundidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[36,8; 46,5]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[34,9; 36,8[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[31,7; 34,9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[30,6; 31,7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[25,9; 30,6[</span><br>';
+    div.innerHTML += '<i style="background: #004f8a"></i><span>[44,2; 50,4]</span><br>';
+    div.innerHTML += '<i style="background: #006db2"></i><span>[41,8; 44,2[</span><br>';
+    div.innerHTML += '<i style="background: #00a6e2"></i><span>[38,9; 41,8[</span><br>';
+    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[36,1; 38,9[</span><br>';
+    div.innerHTML += '<i style="background: #d3edfc"></i><span>[32,8; 36,1[</span><br>';
     return div;
 };
-
-
-
 
 
 //      2. Óbitos
@@ -1267,11 +1270,11 @@ legenda_OT_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[476; 6601]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[233; 476[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[142; 233[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[90; 142[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[9; 90[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[476; 6601]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[233; 476[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[142; 233[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[90; 142[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[9; 90[</span><br>';
     return div;
 };
 var legenda_OT_CONC_2011 = L.control({ position: "bottomleft" });
@@ -1279,23 +1282,23 @@ legenda_OT_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[463; 6619]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[228; 463[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[143; 228[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[93; 143[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[3; 93[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[463; 6619]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[228; 463[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[143; 228[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[93; 143[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[3; 93[</span><br>';
     return div;
 };
 var legenda_OT_CONC_2001 = L.control({ position: "bottomleft" });
 legenda_OT_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
-    div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[458; 8139]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[242; 458[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[154; 242[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[99; 154[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[4; 99[</span><br>';
+    div.innerHTML += "<h4>Município, 2001</h4>";
+    div.innerHTML += '<i style="background: #980043"></i><span>[458; 8139]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[242; 458[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[154; 242[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[99; 154[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[4; 99[</span><br>';
     return div;
 };
 var legenda_OT_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1303,11 +1306,11 @@ legenda_OT_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3721; 28270]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3280; 3721[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2679; 3280[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1904; 2679[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1288; 1904[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[3721; 28270]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3280; 3721[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2679; 3280[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1904; 2679[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1288; 1904[</span><br>';
     return div;
 };
 var legenda_OT_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -1315,11 +1318,11 @@ legenda_OT_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3483; 25380]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3012; 3483[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2481; 3012[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1888; 2481[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1262; 1888[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[3483; 25380]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3012; 3483[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2481; 3012[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1888; 2481[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1262; 1888[</span><br>';
     return div;
 };
 var legenda_OT_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1327,11 +1330,11 @@ legenda_OT_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos totais</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3500; 25649]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3104; 3500[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2765; 3104[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1993; 2765[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1271; 1993[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[3500; 25649]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3104; 3500[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2765; 3104[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1993; 2765[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1271; 1993[</span><br>';
     return div;
 };
 
@@ -1341,11 +1344,11 @@ legenda_O1_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4; 22]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3; 4[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2; 3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1; 2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[4; 22]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3; 4[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2; 3[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 1[</span><br>';
     return div;
 };
 var legenda_O1_CONC_2011 = L.control({ position: "bottomleft" });
@@ -1353,11 +1356,11 @@ legenda_O1_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4; 21]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3; 4[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2; 3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1; 2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[4; 21]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3; 4[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2; 3[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 1[</span><br>';
     return div;
 };
 var legenda_O1_CONC_2001 = L.control({ position: "bottomleft" });
@@ -1365,11 +1368,11 @@ legenda_O1_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[5; 30]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3; 5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2; 3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1; 2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[5; 30]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3; 5[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2; 3[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 1[</span><br>';
     return div;
 };
 var legenda_O1_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1377,11 +1380,11 @@ legenda_O1_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[7; 104]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[5; 7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2; 5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1; 2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[7; 104]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[5; 7[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2; 5[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 1[</span><br>';
     return div;
 };
 var legenda_O1_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -1389,11 +1392,11 @@ legenda_O1_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[12; 113]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[8; 12[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[3; 8[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2; 3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[12; 113]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[8; 12[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[3; 8[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[2; 3[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1; 2[</span><br>';
     return div;
 };
 var legenda_O1_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1401,11 +1404,11 @@ legenda_O1_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Óbitos <1 ano</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[26; 138]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[17; 26[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[11; 17[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[5; 11[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2; 5[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[26; 138]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[17; 26[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[11; 17[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[5; 11[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[2; 5[</span><br>';
     return div;
 };
 
@@ -1558,79 +1561,78 @@ legenda_TMI_NUTS_2001.onAdd = function(map) {
 };
 
 
-
 //  4. População
 //      4.1. População residente
 var legenda_PR_CONC_2019 = L.control({ position: "bottomleft" });
 legenda_PR_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[45076; 563149]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[20945; 45076[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[11374; 20945[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6679; 11374[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[426; 6679[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[45076; 563149]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[20945; 45076[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[11374; 20945[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[6679; 11374[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[426; 6679[</span><br>';
     return div;
 };
 var legenda_PR_CONC_2011 = L.control({ position: "bottomleft" });
 legenda_PR_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[47729; 547733]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[20522; 47729[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[10828; 20522[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6049; 10828[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[430; 6049[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[47729; 547733]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[20522; 47729[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[10828; 20522[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[6049; 10828[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[430; 6049[</span><br>';
     return div;
 };
 var legenda_PR_CONC_2001 = L.control({ position: "bottomleft" });
 legenda_PR_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[45076; 563149]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[20945; 45076[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[11374; 20945[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[6679; 11374[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[426; 6679[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[45076; 563149]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[20945; 45076[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[11374; 20945[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[6679; 11374[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[426; 6679[</span><br>';
     return div;
 };
 var legenda_PR_NUTS_2019 = L.control({ position: "bottomleft" });
 legenda_PR_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[400937; 2678695]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[275809; 400937[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[242544; 275809[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[126647; 242544[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[94232; 126647[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[400937; 2678695]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[275809; 400937[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[242544; 275809[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[126647; 242544[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[94232; 126647[</span><br>';
     return div;
 };
 var legenda_PR_NUTS_2011 = L.control({ position: "bottomleft" });
 legenda_PR_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[425411; 2821876]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[267785; 425411[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[244836; 267785[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[118506; 244836[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[89063; 118506[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[425411; 2821876]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[267785; 425411[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[244836; 267785[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[118506; 244836[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[89063; 118506[</span><br>';
     return div;
 };
 var legenda_PR_NUTS_2001 = L.control({ position: "bottomleft" });
 legenda_PR_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População residente</h5>";
+    div.innerHTML += "<h5>População residente (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[400937; 2678695]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[275809; 400937[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[242544; 275809[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[126647; 242544[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[94232; 126647[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[400937; 2678695]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[275809; 400937[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[242544; 275809[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[126647; 242544[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[94232; 126647[</span><br>';
     return div;
 };
 
@@ -1652,11 +1654,11 @@ legenda_DP_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Densidade populacional (hab./km<sup>2</sup>)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #bd0026"></i><span>[552; 1367]</span><br>';
-    div.innerHTML += '<i style="background: #f03b20"></i><span>[190; 552[</span><br>';
-    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[121; 190[</span><br>';
-    div.innerHTML += '<i style="background: #fecc5c"></i><span>[70; 121[</span><br>';
-    div.innerHTML += '<i style="background: #ffffb2"></i><span>[28; 70[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[249.1; 7376.1]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[103.8; 249.1[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[48.1; 103.8[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[23; 48.1[</span><br>';
+    div.innerHTML += '<i style="background: #ffffb2"></i><span>[5; 21[</span><br>';
     return div;
 };
 var legenda_DP_CONC_2001 = L.control({ position: "bottomleft" });
@@ -1664,11 +1666,11 @@ legenda_DP_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Densidade populacional (hab./km<sup>2</sup>)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #bd0026"></i><span>[552; 1367]</span><br>';
-    div.innerHTML += '<i style="background: #f03b20"></i><span>[190; 552[</span><br>';
-    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[121; 190[</span><br>';
-    div.innerHTML += '<i style="background: #fecc5c"></i><span>[70; 121[</span><br>';
-    div.innerHTML += '<i style="background: #ffffb2"></i><span>[28; 70[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[226; 7375.5]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[103.5; 226[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[51.7; 103.5[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[22.5; 51.7[</span><br>';
+    div.innerHTML += '<i style="background: #ffffb2"></i><span>[6.5; 22.5[</span><br>';
     return div;
 };
 var legenda_DP_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1688,11 +1690,11 @@ legenda_DP_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Densidade populacional (hab./km<sup>2</sup>)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011)</h4>";
-    div.innerHTML += '<i style="background: #bd0026"></i><span>[222,3; 946,8]</span><br>';
-    div.innerHTML += '<i style="background: #f03b20"></i><span>[100,9; 222,3[</span><br>';
-    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[54; 100,9[</span><br>';
-    div.innerHTML += '<i style="background: #fecc5c"></i><span>[19,9; 54[</span><br>';
-    div.innerHTML += '<i style="background: #ffffb2"></i><span>[13,6; 19,9[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[236.5; 941]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[106.4; 236.5[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[57.9; 106.4[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[21.2; 57.9[</span><br>';
+    div.innerHTML += '<i style="background: #ffffb2"></i><span>[14.8; 21.2[</span><br>';
     return div;
 };
 var legenda_DP_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1700,15 +1702,13 @@ legenda_DP_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Densidade populacional (hab./km<sup>2</sup>)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #bd0026"></i><span>[222,3; 946,8]</span><br>';
-    div.innerHTML += '<i style="background: #f03b20"></i><span>[100,9; 222,3[</span><br>';
-    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[54; 100,9[</span><br>';
-    div.innerHTML += '<i style="background: #fecc5c"></i><span>[19,9; 54[</span><br>';
-    div.innerHTML += '<i style="background: #ffffb2"></i><span>[13,6; 19,9[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[236.8; 899.6]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[108.8; 236.8[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[56.4; 108.8[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5c"></i><span>[22.9; 56.4[</span><br>';
+    div.innerHTML += '<i style="background: #ffffb2"></i><span>[15.8; 22.9[</span><br>';
     return div;
 };
-
-
 
 
 
@@ -2156,23 +2156,23 @@ legenda_PEL_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[1495; 98151]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[461; 1495[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[208; 461[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[90; 208[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[10; 90[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[1495; 98151]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[461; 1495[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[208; 461[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[90; 208[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[10; 90[</span><br>';
     return div;
 };
 var legenda_PEL_CONC_2011 = L.control({ position: "bottomleft" });
 legenda_PEL_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
-    div.innerHTML += "<h5>População estrangeira com estatuto legal(hab.)</h5>";
+    div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[1119; 44128]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[395; 1119[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[159; 395[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[78; 159[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[7; 78[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[1119; 44128]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[395; 1119[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[159; 395[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[78; 159[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[7; 78[</span><br>';
     return div;
 };
 var legenda_PEL_CONC_2008 = L.control({ position: "bottomleft" });
@@ -2180,11 +2180,11 @@ legenda_PEL_CONC_2008.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>Município, 2008</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[1100; 42396]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[346; 1100[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[129; 346[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[62; 129[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[4; 62[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[1100; 42396]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[346; 1100[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[129; 346[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[62; 129[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[4; 62[</span><br>';
     return div;
 };
 var legenda_PEL_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2192,11 +2192,11 @@ legenda_PEL_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[12995; 298175]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[8579; 12995[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[4640; 8579[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2789; 4640[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1182; 2789[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[12995; 298175]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[8579; 12995[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[4640; 8579[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[2789; 4640[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[1182; 2789[</span><br>';
     return div;
 };
 var legenda_PEL_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2204,11 +2204,11 @@ legenda_PEL_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[10239; 217779]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[6386; 10239[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[3442; 6386[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2329; 3442[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1047; 2329[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[10239; 217779]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[6386; 10239[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[3442; 6386[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[2329; 3442[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[1047; 2329[</span><br>';
     return div;
 };
 var legenda_PEL_NUTS_2008 = L.control({ position: "bottomleft" });
@@ -2216,11 +2216,11 @@ legenda_PEL_NUTS_2008.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>População estrangeira com estatuto legal (hab.)</h5>";
     div.innerHTML += "<h4>NUTS III, 2008</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[10145; 224089]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[5367; 10145[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2960; 5367[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2207; 2960[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[896; 2207[</span><br>';
+    div.innerHTML += '<i style="background: #bd0026"></i><span>[10145; 224089]</span><br>';
+    div.innerHTML += '<i style="background: #f03b20"></i><span>[5367; 10145[</span><br>';
+    div.innerHTML += '<i style="background: #fd8d3c"></i><span>[2960; 5367[</span><br>';
+    div.innerHTML += '<i style="background: #fecc5d"></i><span>[2207; 2960[</span><br>';
+    div.innerHTML += '<i style="background: #feffb1"></i><span>[896; 2207[</span><br>';
     return div;
 };
 
@@ -2458,11 +2458,11 @@ legenda_IL_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[57.8; 73.3]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[54.4; 57.8[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[50.9; 54.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[46.5; 50.9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[38.1; 46.5[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[57.8; 73.3]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[54.4; 57.8[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[50.9; 54.4[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[46.5; 50.9[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[38.1; 46.5[</span><br>';
     return div;
 };
 var legenda_IL_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2470,11 +2470,11 @@ legenda_IL_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade(N.º)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[55.5; 68.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[52.5; 55.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[50.1; 52.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[46.2; 50.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[37.4; 46.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[55.5; 68.1]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[52.5; 55.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[50.1; 52.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[46.2; 50.1[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[37.4; 46.2[</span><br>';
     return div;
 };
 var legenda_IL_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2482,11 +2482,11 @@ legenda_IL_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[46.6; 51.6]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[44.1; 46.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[42.4; 44.1[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[40.5; 42.4[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[35.5; 40.5[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[46.6; 51.6]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[44.1; 46.6[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[42.4; 44.1[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[40.5; 42.4[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[35.5; 40.5[</span><br>';
     return div;
 };
 var legenda_IL_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2494,11 +2494,11 @@ legenda_IL_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[55; 57.8]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[52.9; 55[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[49.9; 52.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[44.8; 49.9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[43.3; 44.8[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[55; 57.8]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[52.9; 55[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[49.9; 52.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[44.8; 49.9[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[43.3; 44.8[</span><br>';
     return div;
 };
 var legenda_IL_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2506,11 +2506,11 @@ legenda_IL_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[53.5; 58.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[51.3; 53.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[48.8; 51.3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[46.3; 48.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[44.8; 46.3[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[53.5; 58.4]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[51.3; 53.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[48.8; 51.3[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[46.3; 48.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[44.8; 46.3[</span><br>';
     return div;
 };
 var legenda_IL_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2518,11 +2518,11 @@ legenda_IL_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de longevidade (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[44.6; 47.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[43.5; 44.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[41.9; 43.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[40.2; 41.9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[39; 40.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[44.6; 47.4]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[43.5; 44.6[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[41.9; 43.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[40.2; 41.9[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[39; 40.2[</span><br>';
     return div;
 };
 //      7.3. IDJ
@@ -2531,11 +2531,11 @@ legenda_IDJ_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[21.2; 29.8]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[19.5; 21.2[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[17.9; 19.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[16.2; 17.9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[10.1; 16.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[21.2; 29.8]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[19.5; 21.2[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[17.9; 19.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[16.2; 17.9[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[10.1; 16.2[</span><br>';
     return div;
 };
 var legenda_IDJ_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2543,11 +2543,11 @@ legenda_IDJ_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens(N.º)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[24; 34.2]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[22.3; 24[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[20.8; 22.3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[19; 20.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[11; 19[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[24; 34.2]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[22.3; 24[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[20.8; 22.3[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[19; 20.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[11; 19[</span><br>';
     return div;
 };
 var legenda_IDJ_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2555,11 +2555,11 @@ legenda_IDJ_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[26.6; 44.8]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[24.1; 26.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[22.5; 24.1[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[20.9; 22.5[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[14.8; 20.9[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[26.6; 44.8]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[24.1; 26.6[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[22.5; 24.1[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[20.9; 22.5[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[14.8; 20.9[</span><br>';
     return div;
 };
 var legenda_IDJ_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2567,11 +2567,11 @@ legenda_IDJ_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[20.7; 25.6]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[19.7; 20.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[18.8; 19.7[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[17.6; 18.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[15.5; 17.6[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[20.7; 25.6]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[19.7; 20.7[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[18.8; 19.7[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[17.6; 18.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[15.5; 17.6[</span><br>';
     return div;
 };
 var legenda_IDJ_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2579,11 +2579,11 @@ legenda_IDJ_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[23.6; 26.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[22; 23.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[21.1; 22[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[20; 21.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[18.4; 20[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[23.6; 26.1]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[22; 23.6[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[21.1; 22[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[20; 21.1[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[18.4; 20[</span><br>';
     return div;
 };
 var legenda_IDJ_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2591,24 +2591,24 @@ legenda_IDJ_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de jovens (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[28.2; 32.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[24.2; 28.2[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[22.3; 24.2[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[21.9; 22.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[20; 21.9[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[28.2; 32.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[24.2; 28.2[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[22.3; 24.2[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[21.9; 22.3[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[20; 21.9[</span><br>';
     return div;
 };
-
+//7.4
 var legenda_IDI_CONC_2019 = L.control({ position: "bottomleft" });
 legenda_IDI_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[49.8; 97.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[41.7; 49.8[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[35.5; 41.7[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[29.4; 35.5[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[12.4; 29.4[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[49.8; 97.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[41.7; 49.8[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[35.5; 41.7[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[29.4; 35.5[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[12.4; 29.4[</span><br>';
     return div;
 };
 var legenda_IDI_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2616,11 +2616,11 @@ legenda_IDI_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos(N.º)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[46.5; 92.3]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[37.9; 46.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[31.3; 37.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[25.2; 31.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[11.8; 25.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[46.5; 92.3]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[37.9; 46.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[31.3; 37.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[25.2; 31.3[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[11.8; 25.2[</span><br>';
     return div;
 };
 var legenda_IDI_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2628,11 +2628,11 @@ legenda_IDI_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[42.9; 82.7]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[34.6; 42.9[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[28.7; 34.6[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[22.4; 28.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[12.2; 22.4[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[42.9; 82.7]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[34.6; 42.9[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[28.7; 34.6[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[22.4; 28.7[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[12.2; 22.4[</span><br>';
     return div;
 };
 var legenda_IDI_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2640,11 +2640,11 @@ legenda_IDI_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[43; 50.6]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[39.9; 43[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[35.3; 39.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[26.8; 35.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[21.2; 26.8[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[43; 50.6]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[39.9; 43[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[35.3; 39.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[26.8; 35.3[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[21.2; 26.8[</span><br>';
     return div;
 };
 var legenda_IDI_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2652,11 +2652,11 @@ legenda_IDI_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[39; 48.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[35.3; 39[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[30; 35.3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[20.6; 30[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[18.7; 20.6[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[39; 48.4]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[35.3; 39[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[30; 35.3[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[20.6; 30[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[18.7; 20.6[</span><br>';
     return div;
 };
 var legenda_IDI_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2664,11 +2664,11 @@ legenda_IDI_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência de idosos (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[35.7; 47.5]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[30.9; 35.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[27.2; 30.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[19.8; 27.2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[17; 19.8[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[35.7; 47.5]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[30.9; 35.7[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[27.2; 30.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[19.8; 27.2[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[17; 19.8[</span><br>';
     return div;
 };
 
@@ -2678,11 +2678,11 @@ legenda_IDT_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[66.5; 112.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[60.5; 66.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[54.8; 60.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[49.3; 54.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[36; 49.3[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[66.5; 112.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[60.5; 66.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[54.8; 60.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[49.3; 54.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[36; 49.3[</span><br>';
     return div;
 };
 var legenda_IDT_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2690,11 +2690,11 @@ legenda_IDT_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total(N.º)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[66; 108.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[58.9; 66[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[54.3; 58.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[49; 54.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[37.3; 49[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[66; 108.1]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[58.9; 66[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[54.3; 58.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[49; 54.3[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[37.3; 49[</span><br>';
     return div;
 };
 var legenda_IDT_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2702,11 +2702,11 @@ legenda_IDT_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[65.7; 100.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[58.5; 65.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[52.8; 58.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[47.7; 52.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[37.1; 47.7[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[65.7; 100.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[58.5; 65.7[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[52.8; 58.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[47.7; 52.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[37.1; 47.7[</span><br>';
     return div;
 };
 var legenda_IDT_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2714,11 +2714,11 @@ legenda_IDT_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[62.7; 67.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[59.5; 62.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[55.7; 59.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[45.5; 55.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[43.1; 45.5[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[62.7; 67.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[59.5; 62.7[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[55.7; 59.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[45.5; 55.7[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[43.1; 45.5[</span><br>';
     return div;
 };
 var legenda_IDT_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2726,11 +2726,11 @@ legenda_IDT_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[61.6; 67.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[57.4; 61.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[53.6; 57.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[44.9; 53.6[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[42.9; 44.9[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[61.6; 67.4]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[57.4; 61.6[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[53.6; 57.4[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[44.9; 53.6[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[42.9; 44.9[</span><br>';
     return div;
 };
 var legenda_IDT_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2738,11 +2738,11 @@ legenda_IDT_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de dependência total (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[58.3; 67.5]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[54.4; 58.3[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[51.1; 54.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[47.7; 51.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[42.7; 47.7[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[58.3; 67.5]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[54.4; 58.3[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[51.1; 54.4[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[47.7; 51.1[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[42.7; 47.7[</span><br>';
     return div;
 };
 
@@ -2752,11 +2752,11 @@ legenda_ISP_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3.5; 8]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[2.9; 3.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.4; 2.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2; 2.4[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1; 2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[3.5; 8]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[2.9; 3.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[2.4; 2.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2; 2.4[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[1; 2[</span><br>';
     return div;
 };
 var legenda_ISP_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2764,11 +2764,11 @@ legenda_ISP_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial(N.º)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4.1; 8.5]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.3; 4.1[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.7; 3.3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.2; 2.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.1; 2.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[4.1; 8.5]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[3.3; 4.1[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[2.7; 3.3[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2.2; 2.7[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[1.1; 2.2[</span><br>';
     return div;
 };
 var legenda_ISP_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2776,11 +2776,11 @@ legenda_ISP_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial (N.º)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4.5; 8.2]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.5; 4.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.9; 3.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.3; 2.9[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.2; 2.3[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[4.5; 8.2]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[3.5; 4.5[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[2.9; 3.5[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2.3; 2.9[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[1.2; 2.3[</span><br>';
     return div;
 };
 var legenda_ISP_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2788,11 +2788,11 @@ legenda_ISP_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3.7; 4.7]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[2.9; 3.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.5; 2.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.2; 2.5[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2; 2.2[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[3.7; 4.7]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[2.9; 3.7[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[2.5; 2.9[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2.2; 2.5[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[2; 2.2[</span><br>';
     return div;
 };
 var legenda_ISP_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2800,11 +2800,11 @@ legenda_ISP_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4.8; 5.3]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.4; 4.8[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.8; 3.4[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.3; 2.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.1; 2.3[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[4.8; 5.3]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[3.4; 4.8[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[2.8; 3.4[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2.3; 2.8[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[2.1; 2.3[</span><br>';
     return div;
 };
 var legenda_ISP_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2812,11 +2812,11 @@ legenda_ISP_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Índice de sustentabilidade potencial (N.º)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[5.1; 5.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.7; 5.1[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[3.2; 3.7[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.7; 3.2[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.1; 2.7[</span><br>';
+    div.innerHTML += '<i style="background: #007038"></i><span>[5.1; 5.9]</span><br>';
+    div.innerHTML += '<i style="background: #239b37"></i><span>[3.7; 5.1[</span><br>';
+    div.innerHTML += '<i style="background: #a0b939"></i><span>[3.2; 3.7[</span><br>';
+    div.innerHTML += '<i style="background: #c3da82"></i><span>[2.7; 3.2[</span><br>';
+    div.innerHTML += '<i style="background: #d6e9cd"></i><span>[2.1; 2.7[</span><br>';
     return div;
 };
 
@@ -3183,7 +3183,7 @@ map.on('baselayerchange', function (eventLayer) {
         legenda_ativa.addTo(map);       
     }else if (eventLayer.name === "Óbitos totais, Município (2001)") {
         this.removeControl(legenda_ativa);
-        legenda_ativa = legenda_NOTCONC_2001;
+        legenda_ativa = legenda_OT_CONC_2001;
         legenda_ativa.addTo(map);   
     }else if (eventLayer.name === "Óbitos totais, Nuts III (2019)") {
         this.removeControl(legenda_ativa);
