@@ -689,7 +689,7 @@ L.control.layers(baseMaps, {}, {
 
 var layers = [
     {
-        groupName : "Nascimentos e fecundidade  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "Nascimentos e fecundidade",
         expanded : false,
         layers    : {
             //1.1. Nados-vivos
@@ -722,7 +722,7 @@ var layers = [
             "Taxa de fecundidade, Nuts III (2001)": L_NUTS_TF2001
         }
     },{
-        groupName : "Óbitos  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "Óbitos",
         expanded : false,
         layers    : {
             //Obitos totais
@@ -755,7 +755,7 @@ var layers = [
             "Taxa de mortalidade infantil, Nuts III (2001)": L_NUTS_TMI2001
         }
     },{
-        groupName : "Evolução da população  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "Evolução da população",
         expanded : false,
         layers    : {
             //Crescimento natural
@@ -802,7 +802,7 @@ var layers = [
             "Taxa de crescimento efetivo, Nuts III (2001)":L_NUTSIII_TCE_2001
         }
     },{
-        groupName : "População residente  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "População residente",
         expanded : false,
         layers    : {
             //Populacao residente
@@ -821,7 +821,7 @@ var layers = [
             "Densidade populacional, Nuts III (2001)": L_NUTS_DP2001
         }
     },{
-        groupName : "População estrangeira  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "População estrangeira",
         expanded : false,
         layers    : {
             //População estrangeira com estatuto legal
@@ -833,7 +833,7 @@ var layers = [
             "População estrangeira com estatuto legal, Nuts III (2008)": L_NUTS_PEL2008
         }
     },{ 
-        groupName : "Casamentos e divórcios  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName : "Casamentos e divórcios",
         expanded : false,
         layers    : {
             //Taxa de divorcialidade
@@ -852,7 +852,8 @@ var layers = [
             "Taxa de nupcialidade, Nuts III (2001)": L_NUTS_TNUP2001
         }
     },{
-        groupName :"Indicadores de envelhecimento  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
+        groupName :"Indicadores de envelhecimento",
+        //"Indicadores de envelhecimento  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>"
         expanded : false,
         layers    : {
             //Indice de envelhecimento
@@ -915,7 +916,8 @@ var options = {
     container_width 	: "350px",
     container_maxHeight : "400px", 
     group_maxHeight     : "999px",
-    exclusive       	: false
+    exclusive       	: false,
+    collapsed           : true
 };
 
 L.Control.styledLayerControl(layers, overlayers, options).addTo(map);
@@ -3587,3 +3589,6 @@ L.easyPrint({
     exportOnly: true,
     hideControlContainer: true
 }).addTo(map);
+
+
+map.doubleClickZoom.disable(); 
