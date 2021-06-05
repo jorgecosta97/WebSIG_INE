@@ -913,9 +913,9 @@ var overlayers = [
 
 var options = {
     container_width 	: "350px",
-    container_maxHeight : "450px", 
+    container_maxHeight : "400px", 
     group_maxHeight     : "999px",
-    exclusive       	: true
+    exclusive       	: false
 };
 
 L.Control.styledLayerControl(layers, overlayers, options).addTo(map);
