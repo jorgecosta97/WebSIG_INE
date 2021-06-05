@@ -159,6 +159,7 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 
 .leaflet-control-layers-expanded {
     padding: 5px;
+	overflow: auto;
 }
 
 .leaflet-control-layers:hover {
