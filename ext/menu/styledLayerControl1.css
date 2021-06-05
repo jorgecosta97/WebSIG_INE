@@ -1,20 +1,20 @@
 @font-face {
-    font-family: arial;
+    font-family: BebasNeueRegular;
     src: url(fonts/BebasNeue-webfont.woff);
 }
 
 @font-face {
-    font-family: arial;
+    font-family: Alegreya-Regular;
     src: url(fonts/Alegreya-Regular.ttf);
 }
 
 @font-face {
-    font-family: arial;
+    font-family: Ubuntu-Medium;
     src: url(fonts/Ubuntu-Medium.ttf);
 }
 
 @font-face {
-    font-family: arial;
+    font-family: Ubuntu-Regular;
     src: url(fonts/Ubuntu-Regular.ttf);
 }
 
@@ -23,13 +23,13 @@
 .ac-container{
 	width: auto;
 	text-align: left;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	height: auto;
 }
 
 div[id^="leaflet-control-accordion-layers"] > label {
-	font-family: Arial, sans-serif;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 	padding: 5px 20px;
 	position: relative;
 	z-index: 20;
@@ -39,7 +39,7 @@ div[id^="leaflet-control-accordion-layers"] > label {
 	color: #777;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 	line-height: 33px;
-	font-size: 16px;
+	font-size: 19px;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
@@ -136,11 +136,15 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 }
 
 .menu-item-radio{
-	font-family: arial;
+	font-family: 'Ubuntu-Regular', Arial, sans-serif;
+	font-size: 13px;
+
 }
 
 .menu-item-checkbox{
-	font-family: arial;
+	font-family: 'Ubuntu-Regular', Arial, sans-serif;
+	font-size: 13px;
+
 }
 
 .bt_delete{
@@ -166,4 +170,3 @@ div[id^="leaflet-control-accordion-layers"] > label:hover {
 	background: #e0e3ec url(images/bgnoise_lg.jpg) repeat top left;
 	border-radius: 5px;
 }
-
