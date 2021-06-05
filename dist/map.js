@@ -690,7 +690,7 @@ L.control.layers(baseMaps, {}, {
 var layers = [
     {
         groupName : "Nascimentos e fecundidade  <a href='https://www.escolavirtual.pt/e-manuais/html5-reader/cloud-reader/kitaboo-reflowable.html#/main/https;%7C%7Cwww.escolavirtual.pt%7Cemanuais-cs%7C9789896478414-TE-01%7Chtml5%7C9789896478414-TE-01-lite%7C?bat=MKD0RrS2Z9yFkYz3nscYFM8kj1VrpI9PmWCjmjhyVNv4l5Vvpd1GK1o6091V0ZA8&readerType=new&pageMode=double&page=36&menu=thumbnail' target='_blank' rel='noopener noreferrer'>&#128214</a>",
-        expanded : true,
+        expanded : false,
         layers    : {
             //1.1. Nados-vivos
             "Nados-vivos, Município (2019)": L_CONC_NV2019,
@@ -912,9 +912,9 @@ var overlayers = [
 ];
 
 var options = {
-    container_width 	: "320px",
+    container_width 	: "350px",
     container_maxHeight : "450px", 
-    group_maxHeight     : "700px",
+    group_maxHeight     : "999px",
     exclusive       	: true
 };
 
