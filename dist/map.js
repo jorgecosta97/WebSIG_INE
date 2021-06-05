@@ -916,7 +916,7 @@ var options = {
     container_width 	: "350px",
     container_maxHeight : "400px", 
     group_maxHeight     : "999px",
-    exclusive       	: false,
+    exclusive       	: true,
     collapsed           : true
 };
 
