@@ -1,5 +1,11 @@
 var map = L.map('map');
 map.setView([39.60470549437551, -8.413797424060485], 6);
+map.doubleClickZoom.disable();
+map.attributionControl.setPrefix('<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="https://www.ine.pt">INE</a> | <a href="https://www.pordata.pt/">PORDATA</a>');
+
+
+
+
 
 //  Basemaps
 var B_OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -960,13 +966,6 @@ L.easyButton('<div id="btacores"></div>',function(btn,map){
 },'Centrar no Arquipélago dos Açores').addTo(map);
 
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-//  Ferramenta para medir
-L.control.polylineMeasure ({position:'topleft', unit:'metres', showBearings:false, clearMeasurementsOnStop: false, showClearControl: true, showUnitControl: false}).addTo (map);
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
 //  Legendas
 //      1. Nascimentos e fecundidade
 //          1.2. Nados-vivos
@@ -1432,11 +1431,11 @@ legenda_TM_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #980043"></i><span>[23.3; 37.7]</span><br>';
-    div.innerHTML += '<i style="background: #dd1c77"></i><span>[17.1; 23.3[</span><br>';
-    div.innerHTML += '<i style="background: #df65b0"></i><span>[13.3; 17.1[</span><br>';
-    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[9.9; 13.3[</span><br>';
-    div.innerHTML += '<i style="background: #f1eef6"></i><span>[6.2; 9.9[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[15.4; 28.1]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[13; 15.4[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[10.9; 13[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[8.8; 10.9[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[5.4; 8.8[</span><br>';
     return div;
 };
 var legenda_TM_CONC_2001 = L.control({ position: "bottomleft" });
@@ -1444,11 +1443,11 @@ legenda_TM_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #980043"></i><span>[23.3; 37.7]</span><br>';
-    div.innerHTML += '<i style="background: #dd1c77"></i><span>[17.1; 23.3[</span><br>';
-    div.innerHTML += '<i style="background: #df65b0"></i><span>[13.3; 17.1[</span><br>';
-    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[9.9; 13.3[</span><br>';
-    div.innerHTML += '<i style="background: #f1eef6"></i><span>[6.2; 9.9[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[15.6; 26.5]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[13.2; 15.6[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[11.5; 13.2[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[9.3; 11.5[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[5.1; 9.3[</span><br>';
     return div;
 };
 var legenda_TM_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1468,11 +1467,11 @@ legenda_TM_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #980043"></i><span>[15.6; 18.2]</span><br>';
-    div.innerHTML += '<i style="background: #dd1c77"></i><span>[13.4; 15.6[</span><br>';
-    div.innerHTML += '<i style="background: #df65b0"></i><span>[12.3; 13.4[</span><br>';
-    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[10.1; 12.3[</span><br>';
-    div.innerHTML += '<i style="background: #f1eef6"></i><span>[7.8; 10.1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[13.3; 16]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[11.7; 13.3[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[10.3; 11.7[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[9; 10.3[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[7; 9[</span><br>';
     return div;
 };
 var legenda_TM_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1480,11 +1479,11 @@ legenda_TM_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #980043"></i><span>[15.6; 18.2]</span><br>';
-    div.innerHTML += '<i style="background: #dd1c77"></i><span>[13.4; 15.6[</span><br>';
-    div.innerHTML += '<i style="background: #df65b0"></i><span>[12.3; 13.4[</span><br>';
-    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[10.1; 12.3[</span><br>';
-    div.innerHTML += '<i style="background: #f1eef6"></i><span>[7.8; 10.1[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[13; 15.9]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[12.3; 13[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[11.3; 12.3[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[9.5; 11.3[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[7.3; 9.5[</span><br>';
     return div;
 };
 
@@ -1494,11 +1493,11 @@ legenda_TMI_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[15.6; 45.5]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[8.8; 15.6[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[4.3; 8.8[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[0.9; 4.3[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[0; 0.9[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[15.6; 66.7]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[8.8; 15.6[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[4.3; 8.8[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[0.9; 4.3[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 0.9[</span><br>';
     return div;
 };
 var legenda_TMI_CONC_2011 = L.control({ position: "bottomleft" });
@@ -1506,11 +1505,11 @@ legenda_TMI_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[27.8; 66.7]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[14.5; 27.8[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[7.3; 14.5[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[2.2; 7.3[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[0; 2.2[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[27.8; 66.7]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[14.5; 27.8[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[7.3; 14.5[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[2.2; 7.3[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 2.2[</span><br>';
     return div;
 };
 var legenda_TMI_CONC_2001 = L.control({ position: "bottomleft" });
@@ -1518,11 +1517,11 @@ legenda_TMI_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[27.4; 52.6]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[12.8; 27.4[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[6.1; 12.8[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[2.0; 6.1[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[0; 2.0[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[27.4; 52.6]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[12.8; 27.4[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[6.1; 12.8[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[2.0; 6.1[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 2.0[</span><br>';
     return div;
 };
 var legenda_TMI_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -1530,11 +1529,11 @@ legenda_TMI_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[3.38; 6.8]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[2.84; 3.38[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[1.98; 2.84[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[1.7; 1.98[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[0; 1.7[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[3.38; 6.8]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[2.84; 3.38[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[1.98; 2.84[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1.7; 1.98[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[0; 1.7[</span><br>';
     return div;
 };
 var legenda_TMI_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -1542,11 +1541,11 @@ legenda_TMI_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[3.6; 5.3]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[3.0; 3.6[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[2.8; 3.0[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[1.7; 2.8[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[1.1; 1.7[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[3.6; 5.3]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[3.0; 3.6[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[2.8; 3.0[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[1.7; 2.8[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1.1; 1.7[</span><br>';
     return div;
 };
 var legenda_TMI_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -1554,11 +1553,11 @@ legenda_TMI_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de mortalidade infantil (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #7e1d7c"></i><span>[6.7; 10.3]</span><br>';
-    div.innerHTML += '<i style="background: #83559e"></i><span>[5.1; 6.7[</span><br>';
-    div.innerHTML += '<i style="background: #8b95c6"></i><span>[4.0; 5.1[</span><br>';
-    div.innerHTML += '<i style="background: #b3cce2"></i><span>[3.0; 4.0[</span><br>';
-    div.innerHTML += '<i style="background: #ecf4f7"></i><span>[1.9; 3.0[</span><br>';
+    div.innerHTML += '<i style="background: #980043"></i><span>[6.7; 10.3]</span><br>';
+    div.innerHTML += '<i style="background: #dd1c77"></i><span>[5.1; 6.7[</span><br>';
+    div.innerHTML += '<i style="background: #df65b0"></i><span>[4.0; 5.1[</span><br>';
+    div.innerHTML += '<i style="background: #d7b5d8"></i><span>[3.0; 4.0[</span><br>';
+    div.innerHTML += '<i style="background: #f1eef6"></i><span>[1.9; 3.0[</span><br>';
     return div;
 };
 
@@ -2233,11 +2232,11 @@ legenda_TD_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[2.3; 3.7]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[2; 2.3[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[1.7; 2[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1.3; 1.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1.3[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[2.3; 3.7]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[2; 2.3[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[1.7; 2[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[1.3; 1.7[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 1.3[</span><br>';
     return div;
 };
 var legenda_TD_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2245,11 +2244,11 @@ legenda_TD_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade(‰)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[2.9; 4.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[2.5; 2.9[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.1; 2.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1.6; 2.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 1.6[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[2.9; 4.9]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[2.5; 2.9[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[2.1; 2.5[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[1.6; 2.1[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 1.6[</span><br>';
     return div;
 };
 var legenda_TD_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2257,11 +2256,11 @@ legenda_TD_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[2.1; 5.5]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[1.5; 2.1[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[1.1; 1.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[0.7; 1.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 0.7[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[2.1; 5.5]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[1.5; 2.1[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[1.1; 1.5[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[0.7; 1.1[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 0.7[</span><br>';
     return div;
 };
 var legenda_TD_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2269,11 +2268,11 @@ legenda_TD_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[2; 2.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[1.9; 2[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[1.8; 1.9[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1.6; 1.8[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.5; 1.6[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[2; 2.4]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[1.9; 2[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[1.8; 1.9[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[1.6; 1.8[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[1.5; 1.6[</span><br>';
     return div;
 };
 var legenda_TD_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2281,11 +2280,11 @@ legenda_TD_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[2.7; 3.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[2.5; 2.7[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.3; 2.5[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.1; 2.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[1.9; 2.1[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[2.7; 3.1]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[2.5; 2.7[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[2.3; 2.5[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[2.1; 2.3[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[1.9; 2.1[</span><br>';
     return div;
 };
 var legenda_TD_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2293,11 +2292,11 @@ legenda_TD_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de divorcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[1.9; 2.6]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[1.6; 1.9[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[1.4; 1.6[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[1.2; 1.4[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0.9; 1.2[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[1.9; 2.6]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[1.6; 1.9[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[1.4; 1.6[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[1.2; 1.4[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0.9; 1.2[</span><br>';
     return div;
 };
 //      6.2. Taxa de nupcialidade (2001, 2011, 2019)
@@ -2306,11 +2305,11 @@ legenda_TNUP_CONC_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4.3; 24.4]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.3; 4.3[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.7; 3.3[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2; 2.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 2[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[4.3; 24.4]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[3.3; 4.3[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[2.7; 3.3[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[2; 2.7[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 2[</span><br>';
     return div;
 };
 var legenda_TNUP_CONC_2011 = L.control({ position: "bottomleft" });
@@ -2318,11 +2317,11 @@ legenda_TNUP_CONC_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade(‰)</h5>";
     div.innerHTML += "<h4>Município, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[4.2; 6.8]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.6; 4.2[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[3; 3.6[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.4; 3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 2.4[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[4.2; 6.8]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[3.6; 4.2[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[3; 3.6[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[2.4; 3[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 2.4[</span><br>';
     return div;
 };
 var legenda_TNUP_CONC_2001 = L.control({ position: "bottomleft" });
@@ -2330,11 +2329,11 @@ legenda_TNUP_CONC_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade (‰)</h5>";
     div.innerHTML += "<h4>Município, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[6.5; 10]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[5.7; 6.5[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[5.1; 5.7[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[4.3; 5.1[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[0; 4.3[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[6.5; 10]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[5.7; 6.5[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[5.1; 5.7[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[4.3; 5.1[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[0; 4.3[</span><br>';
     return div;
 };
 var legenda_TNUP_NUTS_2019 = L.control({ position: "bottomleft" });
@@ -2342,11 +2341,11 @@ legenda_TNUP_NUTS_2019.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2019</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3.6; 3.9]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.1; 3.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[2.7; 3.1[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.6; 2.7[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.1; 2.6[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[3.6; 3.9]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[3.1; 3.6[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[2.7; 3.1[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[2.6; 2.7[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[2.1; 2.6[</span><br>';
     return div;
 };
 var legenda_TNUP_NUTS_2011 = L.control({ position: "bottomleft" });
@@ -2354,11 +2353,11 @@ legenda_TNUP_NUTS_2011.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2011</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[3.9; 4.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[3.6; 3.9[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[3.3; 3.6[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[2.9; 3.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[2.2; 2.9[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[3.9; 4.1]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[3.6; 3.9[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[3.3; 3.6[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[2.9; 3.3[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[2.2; 2.9[</span><br>';
     return div;
 };
 var legenda_TNUP_NUTS_2001 = L.control({ position: "bottomleft" });
@@ -2366,11 +2365,11 @@ legenda_TNUP_NUTS_2001.onAdd = function(map) {
     var div = L.DomUtil.create("div", "legend");
     div.innerHTML += "<h5>Taxa de nupcialidade (‰)</h5>";
     div.innerHTML += "<h4>NUTS III, 2001</h4>";
-    div.innerHTML += '<i style="background: #004f8a"></i><span>[6.6; 7.1]</span><br>';
-    div.innerHTML += '<i style="background: #006db2"></i><span>[6; 6.6[</span><br>';
-    div.innerHTML += '<i style="background: #00a6e2"></i><span>[5.3; 6[</span><br>';
-    div.innerHTML += '<i style="background: #5ac5f3"></i><span>[4.7; 5.3[</span><br>';
-    div.innerHTML += '<i style="background: #d3edfc"></i><span>[4; 4.7[</span><br>';
+    div.innerHTML += '<i style="background: #cc560c"></i><span>[6.6; 7.1]</span><br>';
+    div.innerHTML += '<i style="background: #ef821d"></i><span>[6; 6.6[</span><br>';
+    div.innerHTML += '<i style="background: #fdb350"></i><span>[5.3; 6[</span><br>';
+    div.innerHTML += '<i style="background: #ffe19b"></i><span>[4.7; 5.3[</span><br>';
+    div.innerHTML += '<i style="background: #feffd1"></i><span>[4; 4.7[</span><br>';
     return div;
 };
 
@@ -3581,14 +3580,29 @@ map.on('baselayerchange', function (event) {
     L_sedes_distrito.bringToFront();
 });
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+//  Ferramenta para medir
+L.control.polylineMeasure ({position:'topleft', unit:'metres', showBearings:false, clearMeasurementsOnStop: false, showClearControl: true, showUnitControl: false}).addTo (map);
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 // Easyprint 
-L.easyPrint({
+var imprimir = L.easyPrint({
     tileLayer: B_OSM,
     sizeModes: ['Current', 'A4Landscape', 'A4Portrait'],
     filename: 'myMap',
     exportOnly: true,
     hideControlContainer: true
-}).addTo(map);
+});
+imprimir.addTo(map);
 
 
-map.doubleClickZoom.disable(); 
+map.on('baselayerchange', function (eventLayer) {
+    if (eventLayer.name === "Remover fundo") {
+        this.removeControl(imprimir);
+    }else if (eventLayer.name === "Topografia") {
+        imprimir.addTo(map);     
+    }else if (eventLayer.name === "OpenStreetMap") {
+        imprimir.addTo(map);  
+    }else {
+}});
