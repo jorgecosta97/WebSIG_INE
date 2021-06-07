@@ -1006,11 +1006,11 @@ function popup_TMI_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_CN_CONC_2019(d) {
-    return  d > -27   ? '#004f8a' :
-            d > -59   ? '#006db2' :
-            d > -87   ? '#00a6e2' :
-            d > -140  ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > -0    ? '#feedde' :
+            d > -59   ? '#bdd7e7' :
+            d > -87   ? '#6baed6' :
+            d > -140  ? '#3182bd' :
+                        '#08519c';
 };
 function style_CN_CONC_2019(feature) {
     return {
@@ -1026,11 +1026,11 @@ function popup_CN_CONC_2019(feature, layer){
 };
 //              2011
 function colors_CN_CONC_2011(d) {
-    return  d > -6   ? '#004f8a' :
-            d > -36   ? '#006db2' :
-            d > -66   ? '#00a6e2' :
-            d > -101   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 0     ? '#feedde' :
+            d > -36   ? '#bdd7e7' :
+            d > -66   ? '#6baed6' :
+            d > -101  ? '#3182bd' :
+                        '#08519c';
 };
 function style_CN_CONC_2011(feature) {
     return {
@@ -1046,11 +1046,11 @@ function popup_CN_CONC_2011(feature, layer){
 };
 //              2001
 function colors_CN_CONC_2001(d) {
-    return  d > 71   ? '#004f8a' :
-            d > -19   ? '#006db2' :
-            d > -47   ? '#00a6e2' :
-            d > -82   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 71    ? '#fdbe85' :
+            d > 0     ? '#feedde' :
+            d > -47   ? '#bdd7e7' :
+            d > -82   ? '#6baed6' :
+                        '#3182bd';
 };
 function style_CN_CONC_2001(feature) {
     return {
@@ -1067,11 +1067,11 @@ function popup_CN_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_CN_NUTSIII_2019(d) {
-    return  d > -585   ? '#004f8a' :
-            d > -922   ? '#006db2' :
-            d > -1206   ? '#00a6e2' :
-            d > -1580   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 0       ? '#feedde' :
+            d > -922    ? '#bdd7e7' :
+            d > -1206   ? '#6baed6' :
+            d > -1580   ? '#3182bd' :
+                          '#08519c';
 };
 function style_CN_NUTSIII_2019(feature) {
     return {
@@ -1087,11 +1087,11 @@ function popup_CN_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_CN_NUTSIII_2011(d) {
-    return  d > 521   ? '#004f8a' :
-            d > -429   ? '#006db2' :
-            d > -609   ? '#00a6e2' :
-            d > -939   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 0     ? '#feedde' :
+            d > -466  ? '#bdd7e7' :
+            d > -820  ? '#6baed6' :
+            d > -1010 ? '#3182bd' :
+                        '#08519c';
 };
 function style_CN_NUTSIII_2011(feature) {
     return {
@@ -1107,11 +1107,11 @@ function popup_CN_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_CN_NUTSIII_2001(d) {
-    return  d > 521   ? '#004f8a' :
-            d > -429   ? '#006db2' :
-            d > -609   ? '#00a6e2' :
-            d > -939   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 521    ? '#fdbe85' :
+            d > 0      ? '#feedde' :
+            d > -609   ? '#bdd7e7' :
+            d > -939   ? '#6baed6' :
+                         '#3182bd';
 };
 function style_CN_NUTSIII_2001(feature) {
     return {
@@ -1125,8 +1125,6 @@ function style_CN_NUTSIII_2001(feature) {
 function popup_CN_NUTSIII_2001(feature, layer){
     layer.bindPopup('<h4>Crescimento Natural</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2001) = ' + feature.properties.CN2001.toFixed(2) + '</p>');
 };
-
-
 
 //      3.2. Taxa de crescimento natural (2001, 2011, 2019)
 //          CONC
@@ -1212,7 +1210,7 @@ function colors_TCN_NUTSIII_2011(d) {
     return  d > 0     ?  '#e1161a' :
             d > -3.4  ?  '#afd2e6' :
             d > -5.3  ?  '#3b8cc4' :
-                        '#1a3262';
+                         '#1a3262';
 };
 function style_TCN_NUTSIII_2011(feature) {
     return {
@@ -1250,11 +1248,11 @@ function popup_TCN_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_SM_CONC_2019(d) {
-    return  d > 179   ? '#004f8a' :
-            d > 68   ? '#006db2' :
-            d > 37   ? '#00a6e2' :
-            d > 13   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 179  ? '#e6550d' :
+            d > 68   ? '#fd8d3c' :
+            d > 37   ? '#fdbe85' :
+            d > 0    ? '#feedde' :
+                       '#bdd7e7';
 };
 function style_SM_CONC_2019(feature) {
     return {
@@ -1270,11 +1268,11 @@ function popup_SM_CONC_2019(feature, layer){
 };
 //              2011
 function colors_SM_CONC_2011(d) {
-    return  d > 29   ? '#004f8a' :
-            d > -10   ? '#006db2' :
-            d > -40   ? '#00a6e2' :
-            d > -104   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 29    ? '#fdbe85' :
+            d > 0     ? '#feedde' :
+            d > -40   ? '#bdd7e7' :
+            d > -104  ? '#6baed6' :
+                        '#3182bd';
 };
 function style_SM_CONC_2011(feature) {
     return {
@@ -1290,11 +1288,11 @@ function popup_SM_CONC_2011(feature, layer){
 };
 //              2001
 function colors_SM_CONC_2001(d) {
-    return  d > 231   ? '#004f8a' :
-            d > 69   ? '#006db2' :
-            d > 25   ? '#00a6e2' :
-            d > -5   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 231  ? '#e6550d' :
+            d > 69   ? '#fd8d3c' :
+            d > 25   ? '#fdbe85' :
+            d > 0    ? '#feedde' :
+                       '#bdd7e7';
 };
 function style_SM_CONC_2001(feature) {
     return {
@@ -1311,11 +1309,11 @@ function popup_SM_CONC_2001(feature, layer){
 //          NUTSIII
 //              2019
 function colors_SM_NUTSIII_2019(d) {
-    return  d > 1851   ? '#004f8a' :
-            d > 988   ? '#006db2' :
-            d > 676   ? '#00a6e2' :
-            d > 265   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 1851  ? '#e6550d' :
+            d > 988   ? '#fd8d3c' :
+            d > 676   ? '#fdbe85' :
+            d > 0     ? '#feedde' :
+                        '#bdd7e7';
 };
 function style_SM_NUTSIII_2019(feature) {
     return {
@@ -1331,15 +1329,15 @@ function popup_SM_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_SM_NUTSIII_2011(d) {
-    return  d > 2135   ? '#004f8a' :
-            d > 1409   ? '#006db2' :
-            d > 576   ? '#00a6e2' :
-            d > 209   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 0       ? '#feedde' :
+            d > -480    ? '#bdd7e7' :
+            d > -670    ? '#6baed6' :
+            d > -1530   ? '#3182bd' :
+                          '#08519c';
 };
 function style_SM_NUTSIII_2011(feature) {
     return {
-        fillColor: colors_SM_NUTSIII_2011(feature.properties.SM2001),
+        fillColor: colors_SM_NUTSIII_2011(feature.properties.SM2011),
         weight: 0.5,
         opacity: 1,
         color: 'black',
@@ -1347,15 +1345,15 @@ function style_SM_NUTSIII_2011(feature) {
     };
 };
 function popup_SM_NUTSIII_2011(feature, layer){
-    layer.bindPopup('<h4>Saldo migratório</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.SM2001.toFixed(1) + '</p>');
+    layer.bindPopup('<h4>Saldo migratório</h4> <p>NUTS III: ' + feature.properties.Anos + ' (2011) = ' + feature.properties.SM2011.toFixed(1) + '</p>');
 };
 //              2001
 function colors_SM_NUTSIII_2001(d) {
-    return  d > 2135   ? '#004f8a' :
-            d > 1409   ? '#006db2' :
-            d > 576   ? '#00a6e2' :
-            d > 209   ? '#5ac5f3' :
-                        '#d3edfc';
+    return  d > 2135  ? '#e6550d' :
+            d > 1409  ? '#fd8d3c' :
+            d > 576   ? '#fdbe85' :
+            d > 0     ? '#feedde' :
+                        '#bdd7e7';
 };
 function style_SM_NUTSIII_2001(feature) {
     return {
@@ -1375,12 +1373,12 @@ function popup_SM_NUTSIII_2001(feature, layer){
 //          Município
 //              2019
 function colors_TCM_CONC_2019(d) {
-    return  d > 8.96    ?   '#c01414' :
-            d > 6.4     ?   '#d44837' :
-            d > 4.63    ?   '#e28679' :
-            d > 2.92    ?   '#eeb8ac' :
-            d > 0       ?   '#f8e4dd' :
-                            '#72b2d8';
+    return  d > 8.96    ?   '#a63603' :
+            d > 6.40    ?   '#e6550d' :
+            d > 4.63    ?   '#fd8d3c' :
+            d > 2.92    ?   '#fdbe85' :
+            d > 0       ?   '#feedde' :
+                            '#bdd7e7';
 };
 function style_TCM_CONC_2019(feature) {
     return {
@@ -1396,12 +1394,12 @@ function popup_TCM_CONC_2019(feature, layer){
 };
 //              2011
 function colors_TCM_CONC_2011(d) {
-    return  d > 2.67    ?   '#c01414' :
-            d > 0       ?   '#d44837' :
-            d > -2.01   ?   '#e28679' :
-            d > -3.61   ?   '#eeb8ac' :
-            d > -6.33   ?   '#f8e4dd' :
-                            '#72b2d8';
+    return  d > 2.67    ?   '#fdbe85' :
+            d > 0       ?   '#feedde' :
+            d > -2.01   ?   '#bdd7e7' :
+            d > -3.61   ?   '#6baed6' :
+            d > -6.33   ?   '#3182bd' :
+                            '#08519c';
 };
 function style_TCM_CONC_2011(feature) {//mudar cores
     return {
@@ -1417,12 +1415,12 @@ function popup_TCM_CONC_2011(feature, layer){
 };
 //              2001
 function colors_TCM_CONC_2001(d) {
-    return  d > 10.22   ?   '#c01414' :
-            d > 5.6     ?   '#d44837' :
-            d > 3.61    ?   '#e28679' :
-            d > 1.54    ?   '#eeb8ac' :
-            d > 0       ?   '#f8e4dd' :
-                            '#72b2d8';
+    return  d > 10.22   ?   '#a63603' :
+            d > 5.6     ?   '#e6550d' :
+            d > 3.61    ?   '#fd8d3c' :
+            d > 1.54    ?   '#fdbe85' :
+            d > 0       ?   '#feedde' :
+                            '#bdd7e7';
 };
 function style_TCM_CONC_2001(feature) {
     return {
@@ -1439,12 +1437,12 @@ function popup_TCM_CONC_2001(feature, layer){
 //          NUTS III
 //              2019
 function colors_TCM_NUTSIII_2019(d) {
-    return  d > 8   ?   '#c01414' :
-            d > 6   ?   '#d44837' :
-            d > 4   ?   '#e28679' :
-            d > 2   ?   '#eeb8ac' :
-            d > 0   ?   '#f8e4dd' :
-                        '#72b2d8';
+    return  d > 8   ?   '#a63603' :
+            d > 6   ?   '#e6550d' :
+            d > 4   ?   '#fd8d3c' :
+            d > 2   ?   '#fdbe85' :
+            d > 0   ?   '#feedde' :
+                        '#bdd7e7';
 };
 function style_TCM_NUTSIII_2019(feature) {
     return {
@@ -1460,12 +1458,12 @@ function popup_TCM_NUTSIII_2019(feature, layer){
 };
 //              2011
 function colors_TCM_NUTSIII_2011(d) {//mudar cores
-    return  d > 0       ?   '#c01414' :
-            d > -0.77   ?   '#d44837' :
-            d > -2.27   ?   '#e28679' :
-            d > 2.76    ?   '#eeb8ac' :
-            d > -4.4    ?   '#f8e4dd' :
-                            '#72b2d8';
+    return  d > 0       ?   '#feedde' :
+            d > -0.77   ?   '#eff3ff' :
+            d > -2.27   ?   '#bdd7e7' :
+            d > 2.76    ?   '#6baed6' :
+            d > -4.4    ?   '#3182bd' :
+                            '#08519c';
 };
 function style_TCM_NUTSIII_2011(feature) {
     return {
@@ -1481,12 +1479,12 @@ function popup_TCM_NUTSIII_2011(feature, layer){
 };
 //              2001
 function colors_TCM_NUTSIII_2001(d) {
-    return  d > 7.84    ?   '#c01414' :
-            d > 5.62    ?   '#d44837' :
-            d > 3.7     ?   '#e28679' :
-            d > 2.64    ?   '#eeb8ac' :
-            d > 0       ?   '#f8e4dd' :
-                            '#72b2d8';
+    return  d > 7.84    ?   '#a63603' :
+            d > 5.62    ?   '#e6550d' :
+            d > 3.7     ?   '#fd8d3c' :
+            d > 2.64    ?   '#fdbe85' :
+            d > 0       ?   '#feedde' :
+                            '#bdd7e7';
 };
 function style_TCM_NUTSIII_2001(feature) {
     return {
@@ -1505,8 +1503,8 @@ function popup_TCM_NUTSIII_2001(feature, layer){
 //          Municipio
 //              2019
 function colors_CE_CONC_2019(d) {
-    return  d > 55   ? '#004f8a' :
-            d > 5   ? '#006db2' :
+    return  d > 55    ? '#004f8a' :
+            d > 5     ? '#006db2' :
             d > -36   ? '#00a6e2' :
             d > -85   ? '#5ac5f3' :
                         '#d3edfc';
@@ -1525,8 +1523,8 @@ function popup_CE_CONC_2019(feature, layer){
 };
 //              2011
 function colors_CE_CONC_2011(d) {
-    return  d > 6   ? '#004f8a' :
-            d > 58   ? '#006db2' :
+    return  d > 6      ? '#004f8a' :
+            d > 58     ? '#006db2' :
             d > -106   ? '#00a6e2' :
             d > -188   ? '#5ac5f3' :
                         '#d3edfc';
@@ -1546,7 +1544,7 @@ function popup_CE_CONC_2011(feature, layer){
 //              2001
 function colors_CE_CONC_2001(d) {
     return  d > 306   ? '#004f8a' :
-            d > 63   ? '#006db2' :
+            d > 63    ? '#006db2' :
             d > -19   ? '#00a6e2' :
             d > -63   ? '#5ac5f3' :
                         '#d3edfc';
